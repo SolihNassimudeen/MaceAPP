@@ -1,0 +1,95 @@
+<div class="main_body">
+    <div class="row" style="--bs-gutter-x: 0rem;">
+        <div class="col-1"></div>
+        <div class="col-10">
+            <div class="login_body">
+                <div class="student_div">
+                    <div class="w-100 text-center mt-5">
+                        <img class="img_border w-25" src="../../../assets/student_icon.jpg" alt="student_icon">
+                        <h3 class="mt-2"><strong>Student</strong></h3>
+                    </div>
+                    <hr>
+                    <div class="p-3 text-center">
+                        <form>
+                            <div class="mb-2">
+                                <input class="form-control" type="text" placeholder="Enter your Email">
+                            </div>
+                            <div>
+                                <div class="w-50 mb-2 dropdown_paddingright" style="float:left;">
+                                    <select class="form-control w-100">
+                                        <option value="" disabled selected hidden>Department</option>
+                                        <option value="cs">Computer Science</option>
+                                        <option value="civil">Civil Engineering</option>
+                                        <option value="mech">Mechanical Engineering</option>
+                                        <option value="ec">Electric and Electronics</option>
+                                    </select>
+                                </div>
+                                <div class="w-50 mb-2 dropdown_paddingleft" style="float: left;">
+                                    <select class="form-control w-100">
+                                        <option value="" disabled selected hidden>Year</option>
+                                        <option value="1">1st</option>
+                                        <option value="2">2nd</option>
+                                        <option value="3">3rd</option>
+                                        <option value="4">4th</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <input class="form-control" type="password" placeholder="Enter your Password">
+                            </div>
+                            <div class="mt-5">
+                                <button class="btn btn-outline-secondary w-50"
+                                    type="submit"><strong>Login</strong></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="college_div">
+                    <div class="admin_button">
+                        <button class="btn btn-outline-dark w-100" (click)="adminloginpage()" >Admin</button>
+                    </div>
+                    <div class="center">
+                        <div class="college_name form-control p-2">
+                            <h2 style="font-size: 1.5rem;">Muslim Association College of Engineering</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faculty_div">
+                    <div class="text-center mt-5">
+                        <img class="img_border w-25" src="../../../assets/faculty_icon.jpg" alt="faculty_icon">
+                        <h3 class="mt-2"><strong>Faculty</strong></h3>
+                    </div>
+                    <hr>
+                    <div class="p-3 text-center">
+                        <form>
+                            <div class="mb-2">
+                                <input class="form-control" type="text" placeholder="Enter your Email">
+                            </div>
+
+                            <div class="w-100 mb-2 dropdown_paddingright">
+                                <select class="form-control w-100">
+                                    <option value="" disabled selected hidden>Department</option>
+                                    <option value="cs">Computer Science</option>
+                                    <option value="civil">Civil Engineering</option>
+                                    <option value="mech">Mechanical Engineering</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <input class="form-control" type="password" placeholder="Enter your Password">
+                            </div>
+                            <div class="mt-5">
+                                <button class="btn btn-outline-secondary w-50"
+                                    type="submit"><strong>Login</strong></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-1"></div>
+    </div>
+
+</div>
