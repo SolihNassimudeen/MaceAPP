@@ -75,10 +75,14 @@
                 <div>
                     <label for="subject"><strong>Teaching Subject code In UpperCase</strong></label>
                 </div>
-                <div class="w-25 subject_div"><input class="form-control" type="text" formControlName="sub1" name="sub1"></div>
-                <div class="w-25 subject_div"><input class="form-control" type="text" formControlName="sub2" name="sub2"></div>
-                <div class="w-25 subject_div"><input class="form-control" type="text" formControlName="sub3" name="sub3"></div>
-                <div class="w-25 subject_div"><input class="form-control" type="text" formControlName="sub4" name="sub4"></div>
+                <div class="w-25 subject_div"><input class="form-control" type="text" formControlName="sub1"
+                        name="sub1"></div>
+                <div class="w-25 subject_div"><input class="form-control" type="text" formControlName="sub2"
+                        name="sub2"></div>
+                <div class="w-25 subject_div"><input class="form-control" type="text" formControlName="sub3"
+                        name="sub3"></div>
+                <div class="w-25 subject_div"><input class="form-control" type="text" formControlName="sub4"
+                        name="sub4"></div>
             </div>
             <div>
                 <label for="password"><strong>Enter the password</strong></label>
@@ -123,8 +127,8 @@
 
 <div class="outer_div" *ngIf="Item==5">
     <div class="inner_div text-center form-control p-4">
-        <h3><strong>Delete a Faculty</strong></h3>
-        <form (ngSubmit)="deletefaculty()" [formGroup]="deletefacultyarray">
+        <h3><strong>Add a student</strong></h3>
+        <form (ngSubmit)="addstudent()" [formGroup]="addStudentArray">
             <hr>
             <div>
                 <label for="email"><strong>Enter Email</strong></label>
@@ -141,8 +145,24 @@
                     <li><a class="dropdown-item" (click)="departmentMech()">Mechanical Engineering</a></li>
                 </ul>
             </div>
+            <label><strong>Select Academic year</strong></label>
+            <div class="form-control mb-2" style="text-align: center;height: 2rem; padding-bottom: 1rem;">
+                <a class="adddelete_hover nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" (click)="firstyearselected()">1st year</a></li>
+                    <li><a class="dropdown-item" (click)="secondyearselected()">2nd year</a></li>
+                    <li><a class="dropdown-item" (click)="thirdyearselected()">3rd year</a></li>
+                    <li><a class="dropdown-item" (click)="fourthyearselected()">4th year</a></li>
+                </ul>
+            </div>
             <div>
-                <button type="submit" class="btn btn-outline-success w-25 m-3"><strong>Delete Now</strong></button>
+                <label for="email"><strong>Default Password</strong></label>
+                <input class="form-control text-center" type="text" placeholder="{{defaultpassword}}" disabled>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-outline-success w-25 m-3"><strong>Register Now</strong></button>
                 <button class="btn btn-outline-danger w-25 m-3" (click)="cancel()"><strong>Cancel</strong></button>
             </div>
         </form>
@@ -150,5 +170,41 @@
 </div>
 
 <div class="outer_div" *ngIf="Item==6">
-    <h1>i am student delete</h1>
+    <div class="inner_div text-center form-control p-4">
+        <h3><strong>Add a student</strong></h3>
+        <form (ngSubmit)="studentDelete()" [formGroup]="studentdeleteArray">
+            <hr>
+            <div>
+                <label for="email"><strong>Enter Email</strong></label>
+                <input class="form-control" formControlName="Email" name="Email" type="text">
+            </div>
+            <label><strong>Select Department</strong></label>
+            <div class="form-control mb-2" style="text-align: center;height: 2rem; padding-bottom: 1rem;">
+                <a class="adddelete_hover nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" (click)="departmentCS()">Computer Science</a></li>
+                    <li><a class="dropdown-item" (click)="departmentCivil()">Civil Engineering</a></li>
+                    <li><a class="dropdown-item" (click)="departmentMech()">Mechanical Engineering</a></li>
+                </ul>
+            </div>
+            <label><strong>Select Academic year</strong></label>
+            <div class="form-control mb-2" style="text-align: center;height: 2rem; padding-bottom: 1rem;">
+                <a class="adddelete_hover nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" (click)="firstyearselected()">1st year</a></li>
+                    <li><a class="dropdown-item" (click)="secondyearselected()">2nd year</a></li>
+                    <li><a class="dropdown-item" (click)="thirdyearselected()">3rd year</a></li>
+                    <li><a class="dropdown-item" (click)="fourthyearselected()">4th year</a></li>
+                </ul>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-outline-success w-25 m-3"><strong>Delete Now</strong></button>
+                <button class="btn btn-outline-danger w-25 m-3" (click)="cancel()"><strong>Cancel</strong></button>
+            </div>
+        </form>
+    </div>
 </div>

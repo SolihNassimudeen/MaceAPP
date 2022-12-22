@@ -10,6 +10,7 @@ import { ServiceService } from 'src/app/service.service';
 })
 export class AdminLoginComponent {
 
+ 
   adminArray=this.Input.group({
     email:['',[Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
     password:['',[Validators.required, Validators.minLength(3)]]
@@ -17,7 +18,7 @@ export class AdminLoginComponent {
 
   constructor(private Input:FormBuilder,private service:ServiceService,private route:Router){}
 
-  ngOnInit(){}
+  ngOnInit(){  }
 
   adminLogin(){
     var email:any=this.adminArray.value.email
@@ -28,6 +29,8 @@ export class AdminLoginComponent {
       .subscribe((result:any)=>{
         if(result){
           alert(result.message)
+          localStorage.setItem("Email",JSON.stringify(result.Email))
+          localStorage.setItem("Name",JSON.stringify(result.Name))
           this.route.navigateByUrl('adminhome')
         }
       },(result)=>{

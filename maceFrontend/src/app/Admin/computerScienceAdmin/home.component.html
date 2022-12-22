@@ -4,7 +4,7 @@
             <img class="w-50" src="../../../assets/user.png" alt="Profile_pic">
         </div>
         <div class="profile_div">
-            <h2 class="Name_heading"><Strong>SOLIH</Strong></h2>
+            <h2 class="Name_heading"><Strong>{{AdminName}}</Strong></h2>
         </div>
         <hr>
         <div class="button_div">
@@ -54,13 +54,10 @@
         </div>
         <hr>
         <div style="background-color: white;">
-            <button class="btn btn-light form-control">Change your password</button>
-        </div>
-        <div class="mt-2" style="background-color: white;">
-            <button class="btn btn-outline-danger form-control" (click)="logout()">Log Out</button>
+            <button class="btn btn-light form-control" (click)="ChangePassword()">Change your password</button>
         </div>
         <div class="mt-5" style="background-color: white;">
-            <button class="btn btn-danger form-control">Delete Account</button>
+            <button class="btn btn-outline-danger form-control" (click)="logout()">Log Out</button>
         </div>
     </div>
    
@@ -72,7 +69,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <button class="btn btn-dark nav_button mx-4">Home</button>
+                                <button class="btn btn-outline-dark nav_button mx-4" (click)="home()">Home</button>
                             </li>
                             <li class="nav-item">
                                 <button class="btn btn-outline-dark nav_button mx-4" (click)="firstyear()">Ist
@@ -98,6 +95,22 @@
 
         <div>
             <app-adminadd-delete [Item]="adminAddanddelete" (onCancel)="Addordeletecancel()"></app-adminadd-delete>
+        </div>
+        <div>
+            <app-changepassword [Item]="adminAddanddelete" (onCancel)="Addordeletecancel()"></app-changepassword>
+        </div>
+
+        <div>
+            <app-csfirst-year [Item]="adminAddanddelete"></app-csfirst-year>
+        </div>
+        <div>
+            <app-cssecond-year [Item]="adminAddanddelete"></app-cssecond-year>
+        </div>
+        <div>
+            <app-csthird-year [Item]="adminAddanddelete"></app-csthird-year>
+        </div>
+        <div>
+            <app-csfourth-year [Item]="adminAddanddelete"></app-csfourth-year>
         </div>
 
         <div class="right_main p-3" *ngIf="adminAddanddelete==0">
@@ -146,11 +159,9 @@
                 </div>
             </div>
             <div class="welcome_quotes">
-                <h1>"Welcome to Computer Science Admin panel"</h1>
+                <h1><strong>"Welcome to Computer Science Admin panel"</strong></h1>
             </div>
 
         </div>
-
     </div>
-
 </div>

@@ -9,20 +9,13 @@ const CsstudentCount = () => {
                         .then(thirdCount => {
                             return mongodb.Csfourthyear.count()
                                 .then(fourthCount => {
-                                    if (fourthCount) {
-                                        return{
-                                            statusCode:200,
-                                            firstYearCount:firstCount,
-                                            secondYearCount:secondCount,
-                                            thirdYearCount:thirdCount,
-                                            fourthYearCount:fourthCount
+                                        return {
+                                            statusCode: 200,
+                                            firstYearCount: firstCount,
+                                            secondYearCount: secondCount,
+                                            thirdYearCount: thirdCount,
+                                            fourthYearCount: fourthCount
                                         }
-                                    }else{
-                                        return{
-                                            statusCode:400,
-                                            message:'count failed'
-                                        }
-                                    }
                                 })
                         })
 
@@ -41,20 +34,13 @@ const CivilstudentCount = () => {
                         .then(thirdCount => {
                             return mongodb.Civilfourthyear.count()
                                 .then(fourthCount => {
-                                    if (fourthCount) {
-                                        return{
-                                            statusCode:200,
-                                            firstYearCount:firstCount,
-                                            secondYearCount:secondCount,
-                                            thirdYearCount:thirdCount,
-                                            fourthYearCount:fourthCount
+                                        return {
+                                            statusCode: 200,
+                                            firstYearCount: firstCount,
+                                            secondYearCount: secondCount,
+                                            thirdYearCount: thirdCount,
+                                            fourthYearCount: fourthCount
                                         }
-                                    }else{
-                                        return{
-                                            statusCode:400,
-                                            message:'count failed'
-                                        }
-                                    }
                                 })
                         })
 
@@ -73,20 +59,14 @@ const MechstudentCount = () => {
                         .then(thirdCount => {
                             return mongodb.Mechfourthyear.count()
                                 .then(fourthCount => {
-                                    if (fourthCount) {
-                                        return{
-                                            statusCode:200,
-                                            firstYearCount:firstCount,
-                                            secondYearCount:secondCount,
-                                            thirdYearCount:thirdCount,
-                                            fourthYearCount:fourthCount
+                                   
+                                        return {
+                                            statusCode: 200,
+                                            firstYearCount: firstCount,
+                                            secondYearCount: secondCount,
+                                            thirdYearCount: thirdCount,
+                                            fourthYearCount: fourthCount
                                         }
-                                    }else{
-                                        return{
-                                            statusCode:400,
-                                            message:'count failed'
-                                        }
-                                    }
                                 })
                         })
 
@@ -96,22 +76,22 @@ const MechstudentCount = () => {
         })
 }
 
-const Facultycount=()=>{
+const Facultycount = () => {
     return mongodb.Csfaculty.count()
-    .then(csfacultycount=>{
-        return mongodb.Civilfaculty.count()
-        .then(civilfacultycount=>{
-            return mongodb.Mechfaculty.count()
-            .then(mechanicalcount=>{
-                return{
-                    statusCode:200,
-                    Cscount:csfacultycount,
-                    Civilcount:civilfacultycount,
-                    Mechcount:mechanicalcount
-                }
-            })
+        .then(csfacultycount => {
+            return mongodb.Civilfaculty.count()
+                .then(civilfacultycount => {
+                    return mongodb.Mechfaculty.count()
+                        .then(mechanicalcount => {
+                            return {
+                                statusCode: 200,
+                                Cscount: csfacultycount,
+                                Civilcount: civilfacultycount,
+                                Mechcount: mechanicalcount
+                            }
+                        })
+                })
         })
-    })
 }
 
-module.exports = { CsstudentCount,CivilstudentCount,MechstudentCount,Facultycount}
+module.exports = { CsstudentCount, CivilstudentCount, MechstudentCount, Facultycount }

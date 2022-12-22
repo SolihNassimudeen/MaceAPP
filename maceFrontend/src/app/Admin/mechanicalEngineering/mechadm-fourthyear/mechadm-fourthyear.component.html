@@ -1,1 +1,23 @@
-<p>mechadm-fourthyear works!</p>
+<div class="outer_div p-5" *ngIf="Item==11">
+    <div class="innerdiv form-control">
+        <table class="table">
+            <thead class="table table-info">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Registration</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody class="table ">
+                <tr *ngFor="let data of mechfourthyearArray">
+                    <td>{{data.Name}}</td>
+                    <td>{{data.Email}}</td>
+                    <td>{{data.Registration}}</td>
+                    <td><button class="btn btn-outline-primary" (click)="details(data._id)">Details</button></td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+</div>

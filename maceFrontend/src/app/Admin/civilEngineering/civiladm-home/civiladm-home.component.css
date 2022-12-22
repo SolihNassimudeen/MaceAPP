@@ -1,0 +1,118 @@
+/* left side portion and nav */
+.left_nav {
+    width: 16%;
+    background-color: #c4c8ff;
+    height: 100vh;
+    border-right: 1px solid rgb(240, 238, 238);
+    float: left;
+}
+.profile_div {
+    width: 100%;
+    text-align: center;
+}
+
+.Name_heading {
+    font-family: 'Yeseva One', cursive;
+    padding-top: 20px;
+}
+
+.left_div_button {
+    width: 100%;
+    border: none;
+    background-color: white;
+    height: 40px;
+}
+.left_div_button:hover{
+    background-color: rgb(240, 238, 238);
+}
+.active_left_button{
+    width: 100%;
+    border: none;
+    background-color:rgb(240, 238, 238) ;
+    height: 40px;
+}
+
+.adddelete_hover{
+    cursor: pointer;
+}
+.adddelete_hover:hover{
+    background-color: rgb(240, 238, 238);
+}
+
+/* right portion  */
+.right_upper_div {
+    width: 100%;
+    height: 20vh;
+    background-color: white;
+}
+.right_div {
+    width: 84%;
+    margin-left: 16%;
+    height: 100vh;
+    background-color: rgb(240, 238, 238);
+}
+
+/* nav bar portion */
+.nav_button{
+    width: 200px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* notification portion */
+.notification_div{
+    width: 50%;
+    float: left;
+}
+.notification_heading{
+    text-align: center;
+    font-family: 'Noto Serif NP Hmong', serif;
+}
+.notification_body{
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: white;
+}
+.notification_input{
+    height: 100px;
+    width: 100%;
+}
+
+/* chart div */
+.chart_div{
+    width: 30%;
+    display: flex;
+    text-align: center;
+}
+.chart_heading{
+    font-family: 'Noto Serif NP Hmong', serif;
+    text-align: center;
+    width: 100%;
+    margin-top: 80px;
+}
+.chart_body{
+    width: 80%;
+    height: 350px;
+    padding-top: 40px;
+}
+.chartposition_student{
+    position: absolute;
+    z-index: 1;
+    margin-left: 666px;
+}
+.chartposition_faculty{
+    position: absolute;
+    z-index: 1;
+    padding-top: 250px;
+    margin-left: 666px;
+}
+.welcome_quotes{
+    position: absolute;
+    margin-top: 68vh;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 1vmax;
+    background-color: #fff;
+    margin-left: 17vmax;
+    font-family: 'Dancing Script', cursive;
+}

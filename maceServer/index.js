@@ -5,6 +5,8 @@ const app = express()
 const notification=require('./Adminoperation/notificationupdates')
 const Count=require('./Adminoperation/StudentandFacultyCount')
 const AddandDelete=require('./Adminoperation/AddandDelete')
+const changepassword=require('./Adminoperation/changepassword')
+const studenttableadmin=require('./Adminoperation/studenttable')
 
 app.use(cors({
     origin:'http://localhost:4200'
@@ -43,6 +45,23 @@ app.get('/CsstudentCount',(req,res)=>{
         }
     })
 })
+app.get('/CivilstudentCount',(req,res)=>{
+    Count.CivilstudentCount()
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+app.get('/MechstudentCount',(req,res)=>{
+    Count.MechstudentCount()
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+
 app.get('/FacultyCount',(req,res)=>{
     Count.Facultycount()
     .then(result=>{
@@ -110,6 +129,315 @@ app.delete('/deleteMechfaculty/:Email',(req,res)=>{
 })
 app.delete('/deleteCivilfaculty/:Email',(req,res)=>{
     AddandDelete.deleteCivilfaculty(req.params.Email)
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+
+app.post('/addCsFirstyear',(req,res)=>{
+    AddandDelete.addCsFirstyear(req.body.Email,req.body.Password)
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+app.post('/addCsSecondyear',(req,res)=>{
+    AddandDelete.addCsSecondyear(req.body.Email,req.body.Password)
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+app.post('/addCsThirdyear',(req,res)=>{
+    AddandDelete.addCsThirdyear(req.body.Email,req.body.Password)
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+app.post('/addCsFourthyear',(req,res)=>{
+    AddandDelete.addCsFourthyear(req.body.Email,req.body.Password)
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+
+app.post('/addCivilFirstyear',(req,res)=>{
+    AddandDelete.addCivilFirstyear(req.body.Email,req.body.Password)
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+app.post('/addCivilSecondyear',(req,res)=>{
+    AddandDelete.addCivilSecondyear(req.body.Email,req.body.Password)
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+app.post('/addCivilThirdyear',(req,res)=>{
+    AddandDelete.addCivilThirdyear(req.body.Email,req.body.Password)
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+app.post('/addCivilFourthyear',(req,res)=>{
+    AddandDelete.addCivilFourthyear(req.body.Email,req.body.Password)
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+
+app.post('/addMechFirstyear',(req,res)=>{
+    AddandDelete.addMechFirstyear(req.body.Email,req.body.Password)
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+app.post('/addMechSecondyear',(req,res)=>{
+    AddandDelete.addMechSecondyear(req.body.Email,req.body.Password)
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+app.post('/addMechThirdyear',(req,res)=>{
+    AddandDelete.addMechThirdyear(req.body.Email,req.body.Password)
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+app.post('/addMechFourthyear',(req,res)=>{
+    AddandDelete.addMechFourthyear(req.body.Email,req.body.Password)
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+
+app.delete('/deleteCsfirstyear/:Email',(req,res)=>{
+    AddandDelete.deleteCsfirstyear(req.params.Email)
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+app.delete('/deleteCssecondyear/:Email',(req,res)=>{
+    AddandDelete.deleteCsfirstyear(req.params.Email)
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+app.delete('/deleteCsThirdyear/:Email',(req,res)=>{
+    AddandDelete.deleteCsfirstyear(req.params.Email)
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+app.delete('/deleteCsfourthyear/:Email',(req,res)=>{
+    AddandDelete.deleteCsfirstyear(req.params.Email)
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+
+app.delete('/deleteCivilfirstyear/:Email',(req,res)=>{
+    AddandDelete.deleteCsfirstyear(req.params.Email)
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+app.delete('/deleteCivilsecondyear/:Email',(req,res)=>{
+    AddandDelete.deleteCsfirstyear(req.params.Email)
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+app.delete('/deleteCivilThirdyear/:Email',(req,res)=>{
+    AddandDelete.deleteCsfirstyear(req.params.Email)
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+app.delete('/deleteCivilfourthyear/:Email',(req,res)=>{
+    AddandDelete.deleteCsfirstyear(req.params.Email)
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+
+app.delete('/deleteMechfirstyear/:Email',(req,res)=>{
+    AddandDelete.deleteCsfirstyear(req.params.Email)
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+app.delete('/deleteMechsecondyear/:Email',(req,res)=>{
+    AddandDelete.deleteCsfirstyear(req.params.Email)
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+app.delete('/deleteMechThirdyear/:Email',(req,res)=>{
+    AddandDelete.deleteCsfirstyear(req.params.Email)
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+app.delete('/deleteMechfourthyear/:Email',(req,res)=>{
+    AddandDelete.deleteCsfirstyear(req.params.Email)
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+
+app.post('/changepassword',(req,res)=>{
+    changepassword.changepassword(req.body.Email,req.body.Password,req.body.newPassword)
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+
+
+app.get('/csfirstyeartable',(req,res)=>{
+    studenttableadmin.csfirstyeartable()
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+app.get('/cssecondyeartable',(req,res)=>{
+    studenttableadmin.cssecondyeartable()
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+app.get('/csthirdyeartable',(req,res)=>{
+    studenttableadmin.csthirdyeartable()
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+app.get('/csfourthyeartable',(req,res)=>{
+    studenttableadmin.csfourthyeartable()
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+
+
+app.get('/civilfirstyeartable',(req,res)=>{
+    studenttableadmin.civilfirstyeartable()
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+app.get('/civilsecondyeartable',(req,res)=>{
+    studenttableadmin.civilsecondyeartable()
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+app.get('/civilthirdyeartable',(req,res)=>{
+    studenttableadmin.civilthirdyeartable()
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+app.get('/civilfourthyeartable',(req,res)=>{
+    studenttableadmin.civilfourthyeartable()
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+
+
+app.get('/mechfirstyeartable',(req,res)=>{
+    studenttableadmin.mechfirstyeartable()
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+app.get('/mechsecondyeartable',(req,res)=>{
+    studenttableadmin.mechsecondyeartable()
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+app.get('/mechthirdyeartable',(req,res)=>{
+    studenttableadmin.mechthirdyeartable()
+    .then(result=>{
+        if(result){
+            res.status(result.statusCode).json(result)
+        }
+    })
+})
+app.get('/mechfourthyeartable',(req,res)=>{
+    studenttableadmin.mechfourthyeartable()
     .then(result=>{
         if(result){
             res.status(result.statusCode).json(result)

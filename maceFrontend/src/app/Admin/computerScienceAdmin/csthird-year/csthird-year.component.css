@@ -1,0 +1,10 @@
+.outer_div{
+    width: 100%;
+    height: 86.3vh;
+}
+.innerdiv{
+    width: 100%;
+    height: 35rem;
+    background-color: #fff;
+    overflow-y: auto;
+}

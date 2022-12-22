@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ServiceService } from 'src/app/service.service';
 
 @Component({
   selector: 'app-mechadm-firstyear',
@@ -7,4 +8,26 @@ import { Component } from '@angular/core';
 })
 export class MechadmFirstyearComponent {
 
+  @Input() Item: any | undefined
+
+  mechfirstyearArray:any=[]
+
+  constructor(private service:ServiceService){ }
+
+  ngOnInit(){
+    this.mechfirstyeardetail()
+  }
+
+  mechfirstyeardetail(){
+    this.service.mechfirstyeartable()
+    .subscribe((result:any)=>{
+      if(result){
+        this.mechfirstyearArray=result.table
+      }
+    })
+  }
+
+  details(id:any){
+
+  }
 }

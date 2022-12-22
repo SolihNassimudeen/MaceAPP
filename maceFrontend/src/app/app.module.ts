@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './Login/login/login.component';
 import { AdminLoginComponent } from './Login/admin-login/admin-login.component';
-import { StudentdetailComponent } from './studentdetail/studentdetail.component';
 import { HomeComponent } from './Admin/computerScienceAdmin/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -23,6 +22,7 @@ import { MechadmSecondyearComponent } from './Admin/mechanicalEngineering/mechad
 import { MechadmThirdyearComponent } from './Admin/mechanicalEngineering/mechadm-thirdyear/mechadm-thirdyear.component';
 import { MechadmFourthyearComponent } from './Admin/mechanicalEngineering/mechadm-fourthyear/mechadm-fourthyear.component';
 import { AdminaddDeleteComponent } from './Admin/AdminAddandDelete/adminadd-delete/adminadd-delete.component';
+import { ChangepasswordComponent } from './Admin/changepassword/changepassword.component';
 
 
 @NgModule({
@@ -30,7 +30,6 @@ import { AdminaddDeleteComponent } from './Admin/AdminAddandDelete/adminadd-dele
     AppComponent,
     LoginComponent,
     AdminLoginComponent,
-    StudentdetailComponent,
     HomeComponent,
     CsfirstYearComponent,
     CssecondYearComponent,
@@ -46,7 +45,8 @@ import { AdminaddDeleteComponent } from './Admin/AdminAddandDelete/adminadd-dele
     MechadmSecondyearComponent,
     MechadmThirdyearComponent,
     MechadmFourthyearComponent,
-    AdminaddDeleteComponent
+    AdminaddDeleteComponent,
+    ChangepasswordComponent
   ],
   imports: [
     BrowserModule,

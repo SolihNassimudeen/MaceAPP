@@ -29,18 +29,30 @@ export class AdminaddDeleteComponent {
     sub4: ['', [Validators.pattern('[A-Z0-9]*')]],
     Password: ['', [Validators.required, Validators.minLength(4)]]
   })
-  facultyDepartment: any
+  selectedDepartment: any
   deletefacultyarray = this.validation.group({
     Email: ['', [Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]]
   })
+  addStudentArray = this.validation.group({
+    Email: ['', [Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]]
+  })
+  selectedyear: any
+  defaultpassword: any = "mace@123"
+  studentdeleteArray = this.validation.group({
+    Email: ['', [Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]]
+  })
+
 
   constructor(private validation: FormBuilder, private service: ServiceService) { }
+
   ngOnInit() { }
+
 
   cancel() {
     this.onCancel.emit()
   }
 
+  //admin add and delete
   addAdmin() {
     if (this.adminAddArray.valid) {
       this.service.addAdmin(this.adminAddArray.value.Name, this.adminAddArray.value.Email, this.adminAddArray.value.DOB, this.adminAddArray.value.Password)
@@ -75,19 +87,23 @@ export class AdminaddDeleteComponent {
       alert('You entered Email not in a valid form')
     }
   }
+
+  //department dropdown
   departmentCS() {
-    this.facultyDepartment = "Computer Science"
+    this.selectedDepartment = "Computer Science"
   }
   departmentCivil() {
-    this.facultyDepartment = "Civil Engineering"
+    this.selectedDepartment = "Civil Engineering"
   }
   departmentMech() {
-    this.facultyDepartment = "Mechanical Engineering"
+    this.selectedDepartment = "Mechanical Engineering"
   }
+
+  //faculty registration portion
   addFaculty() {
     if (this.facultyAddArray.valid) {
-      if (this.facultyDepartment == "Computer Science") {
-        this.service.addCsfaculty(this.facultyAddArray.value.Name, this.facultyAddArray.value.Email, this.facultyDepartment, this.facultyAddArray.value.sub1, this.facultyAddArray.value.sub2, this.facultyAddArray.value.sub3, this.facultyAddArray.value.sub4, this.facultyAddArray.value.Password)
+      if (this.selectedDepartment == "Computer Science") {
+        this.service.addCsfaculty(this.facultyAddArray.value.Name, this.facultyAddArray.value.Email, this.selectedDepartment, this.facultyAddArray.value.sub1, this.facultyAddArray.value.sub2, this.facultyAddArray.value.sub3, this.facultyAddArray.value.sub4, this.facultyAddArray.value.Password)
           .subscribe((result: any) => {
             if (result) {
               alert(result.message)
@@ -97,8 +113,18 @@ export class AdminaddDeleteComponent {
             alert(result.error.message)
           })
       }
-      else if (this.facultyDepartment == 'Civil Engineering') {
-        this.service.addCivilfaculty(this.facultyAddArray.value.Name, this.facultyAddArray.value.Email, this.facultyDepartment, this.facultyAddArray.value.sub1, this.facultyAddArray.value.sub2, this.facultyAddArray.value.sub3, this.facultyAddArray.value.sub4, this.facultyAddArray.value.Password)
+      else if (this.selectedDepartment == 'Civil Engineering') {
+        this.service.addCivilfaculty(this.facultyAddArray.value.Name, this.facultyAddArray.value.Email, this.selectedDepartment, this.facultyAddArray.value.sub1, this.facultyAddArray.value.sub2, this.facultyAddArray.value.sub3, this.facultyAddArray.value.sub4, this.facultyAddArray.value.Password)
+          .subscribe((result: any) => {
+            if (result) {
+              alert(result.message)
+              location.reload()
+            }
+          }, (result) => {
+            alert(result.error.message)
+          })
+      } else if (this.selectedDepartment == "Mechanical Engineering") {
+        this.service.addMechfaculty(this.facultyAddArray.value.Name, this.facultyAddArray.value.Email, this.selectedDepartment, this.facultyAddArray.value.sub1, this.facultyAddArray.value.sub2, this.facultyAddArray.value.sub3, this.facultyAddArray.value.sub4, this.facultyAddArray.value.Password)
           .subscribe((result: any) => {
             if (result) {
               alert(result.message)
@@ -108,58 +134,370 @@ export class AdminaddDeleteComponent {
             alert(result.error.message)
           })
       } else {
-        this.service.addMechfaculty(this.facultyAddArray.value.Name, this.facultyAddArray.value.Email, this.facultyDepartment, this.facultyAddArray.value.sub1, this.facultyAddArray.value.sub2, this.facultyAddArray.value.sub3, this.facultyAddArray.value.sub4, this.facultyAddArray.value.Password)
-          .subscribe((result: any) => {
-            if (result) {
-              alert(result.message)
-              location.reload()
-            }
-          }, (result) => {
-            alert(result.error.message)
-          })
+        alert("please select faculty department")
       }
     } else {
       alert('You Entered data not in a valid form')
     }
   }
+
+  //faculty removing portion
   deletefaculty() {
     if (this.deletefacultyarray.valid) {
-      if (this.facultyDepartment == "Computer Science") {
+      if (this.selectedDepartment == "Computer Science") {
         this.service.deleteCsfaculty(this.deletefacultyarray.value.Email)
-        .subscribe((result:any)=>{
-          if(result){
-            alert(result.message)
-            location.reload()
-          }
-        },(result)=>{
-          alert(result.error.message)
-        })
-      } else if (this.facultyDepartment == "Civil Engineering") {
+          .subscribe((result: any) => {
+            if (result) {
+              alert(result.message)
+              location.reload()
+            }
+          }, (result) => {
+            alert(result.error.message)
+          })
+      } else if (this.selectedDepartment == "Civil Engineering") {
         this.service.deleteCivilfaculty(this.deletefacultyarray.value.Email)
-        .subscribe((result:any)=>{
-          if(result){
-            alert(result.message)
-            location.reload()
-          }
-        },(result)=>{
-          alert(result.error.message)
-        })
-      } else {
+          .subscribe((result: any) => {
+            if (result) {
+              alert(result.message)
+              location.reload()
+            }
+          }, (result) => {
+            alert(result.error.message)
+          })
+      } else if (this.selectedDepartment == "Mechanical Engineering") {
         this.service.deleteMechfaculty(this.deletefacultyarray.value.Email)
-        .subscribe((result:any)=>{
-          if(result){
-            alert(result.message)
-            location.reload()
-          }
-        },(result)=>{
-          alert(result.error.message)
-        })
+          .subscribe((result: any) => {
+            if (result) {
+              alert(result.message)
+              location.reload()
+            }
+          }, (result) => {
+            alert(result.error.message)
+          })
+      } else {
+        alert('please select the department')
       }
     } else {
       alert('You entered mail not in a valid form')
     }
   }
 
-  
+  //year dropdown
+  firstyearselected() {
+    this.selectedyear = "firstyearselected"
+  }
+  secondyearselected() {
+    this.selectedyear = "secondyearselected"
+  }
+  thirdyearselected() {
+    this.selectedyear = "thirdyearselected"
+  }
+  fourthyearselected() {
+    this.selectedyear = "fourthyearselected"
+  }
+
+  //add student
+  addstudent() {
+    if (this.addStudentArray.valid) {
+
+      if (this.selectedDepartment == "Computer Science") {
+        if (this.selectedyear == "firstyearselected") {
+          this.service.addCsFirstyear(this.addStudentArray.value.Email, this.defaultpassword)
+            .subscribe((result: any) => {
+              if (result) {
+                alert(result.message)
+                location.reload()
+              }
+            }, (result) => {
+              alert(result.error.message)
+            })
+        } else if (this.selectedyear == "secondyearselected") {
+          this.service.addCsSecondyear(this.addStudentArray.value.Email, this.defaultpassword)
+            .subscribe((result: any) => {
+              if (result) {
+                alert(result.message)
+                location.reload()
+              }
+            }, (result) => {
+              alert(result.error.message)
+            })
+        } else if (this.selectedyear == "thirdyearselected") {
+          this.service.addCsThirdyear(this.addStudentArray.value.Email, this.defaultpassword)
+            .subscribe((result: any) => {
+              if (result) {
+                alert(result.message)
+                location.reload()
+              }
+            }, (result) => {
+              alert(result.error.message)
+            })
+        } else if (this.selectedyear == "fourthyearselected") {
+          this.service.addCsFourthyear(this.addStudentArray.value.Email, this.defaultpassword)
+            .subscribe((result: any) => {
+              if (result) {
+                alert(result.message)
+                location.reload()
+              }
+            }, (result) => {
+              alert(result.error.message)
+            })
+        } else {
+          alert('please select academic year')
+        }
+      }
+
+      else if (this.selectedDepartment == "Civil Engineering") {
+        if (this.selectedyear == "firstyearselected") {
+          this.service.addCivilFirstyear(this.addStudentArray.value.Email, this.defaultpassword)
+            .subscribe((result: any) => {
+              if (result) {
+                alert(result.message)
+                location.reload()
+              }
+            }, (result) => {
+              alert(result.error.message)
+            })
+        } else if (this.selectedyear == "secondyearselected") {
+          this.service.addCivilSecondyear(this.addStudentArray.value.Email, this.defaultpassword)
+            .subscribe((result: any) => {
+              if (result) {
+                alert(result.message)
+                location.reload()
+              }
+            }, (result) => {
+              alert(result.error.message)
+            })
+        } else if (this.selectedyear == "thirdyearselected") {
+          this.service.addCivilThirdyear(this.addStudentArray.value.Email, this.defaultpassword)
+            .subscribe((result: any) => {
+              if (result) {
+                alert(result.message)
+                location.reload()
+              }
+            }, (result) => {
+              alert(result.error.message)
+            })
+        } else if (this.selectedyear == "fourthyearselected") {
+          this.service.addCivilFourthyear(this.addStudentArray.value.Email, this.defaultpassword)
+            .subscribe((result: any) => {
+              if (result) {
+                alert(result.message)
+                location.reload()
+              }
+            }, (result) => {
+              alert(result.error.message)
+            })
+        } else {
+          alert('please select academic year')
+        }
+      }
+
+
+      else if (this.selectedDepartment == "Mechanical Engineering") {
+        if (this.selectedyear == "firstyearselected") {
+          this.service.addMechFirstyear(this.addStudentArray.value.Email, this.defaultpassword)
+            .subscribe((result: any) => {
+              if (result) {
+                alert(result.message)
+                location.reload()
+              }
+            }, (result) => {
+              alert(result.error.message)
+            })
+        } else if (this.selectedyear == "secondyearselected") {
+          this.service.addMechSecondyear(this.addStudentArray.value.Email, this.defaultpassword)
+            .subscribe((result: any) => {
+              if (result) {
+                alert(result.message)
+                location.reload()
+              }
+            }, (result) => {
+              alert(result.error.message)
+            })
+        } else if (this.selectedyear == "thirdyearselected") {
+          this.service.addMechThirdyear(this.addStudentArray.value.Email, this.defaultpassword)
+            .subscribe((result: any) => {
+              if (result) {
+                alert(result.message)
+                location.reload()
+              }
+            }, (result) => {
+              alert(result.error.message)
+            })
+        } else if (this.selectedyear == "fourthyearselected") {
+          this.service.addMechFourthyear(this.addStudentArray.value.Email, this.defaultpassword)
+            .subscribe((result: any) => {
+              if (result) {
+                alert(result.message)
+                location.reload()
+              }
+            }, (result) => {
+              alert(result.error.message)
+            })
+        } else {
+          alert('please select academic year')
+        }
+      } else {
+        alert('please select department of the student')
+      }
+    }
+
+    else {
+      alert("you entered mail not in a valid form")
+    }
+  }
+
+  //student delete
+  studentDelete() {
+    if (this.studentdeleteArray.valid) {
+      if (this.selectedDepartment == "Computer Science") {
+        if (this.selectedyear == "firstyearselected") {
+          this.service.deleteCsfirstyear(this.studentdeleteArray.value.Email)
+            .subscribe((result: any) => {
+              if (result) {
+                alert(result.message)
+                location.reload()
+              }
+            }, (result) => {
+              alert(result.error.message)
+            })
+        } else if (this.selectedyear == "secondyearselected") {
+          this.service.deleteCssecondyear(this.studentdeleteArray.value.Email)
+            .subscribe((result: any) => {
+              if (result) {
+                alert(result.message)
+                location.reload()
+              }
+            }, (result) => {
+              alert(result.error.message)
+            })
+        } else if (this.selectedyear == "thirdyearselected") {
+          this.service.deleteCsThirdyear(this.studentdeleteArray.value.Email)
+            .subscribe((result: any) => {
+              if (result) {
+                alert(result.message)
+                location.reload()
+              }
+            }, (result) => {
+              alert(result.error.message)
+            })
+        } else if (this.selectedyear == "fourthyearselected") {
+          this.service.deleteCsfourthyear(this.studentdeleteArray.value.Email)
+            .subscribe((result: any) => {
+              if (result) {
+                alert(result.message)
+                location.reload()
+              }
+            }, (result) => {
+              alert(result.error.message)
+            })
+        } else {
+          alert("please select any academic year")
+        }
+      }
+
+
+      else if (this.selectedDepartment == "Civil Engineering") {
+        if (this.selectedyear == "firstyearselected") {
+          this.service.deleteCivilfirstyear(this.studentdeleteArray.value.Email)
+            .subscribe((result: any) => {
+              if (result) {
+                alert(result.message)
+                location.reload()
+              }
+            }, (result) => {
+              alert(result.error.message)
+            })
+        } else if (this.selectedyear == "secondyearselected") {
+          this.service.deleteCivilsecondyear(this.studentdeleteArray.value.Email)
+            .subscribe((result: any) => {
+              if (result) {
+                alert(result.message)
+                location.reload()
+              }
+            }, (result) => {
+              alert(result.error.message)
+            })
+        } else if (this.selectedyear == "thirdyearselected") {
+          this.service.deleteCivilThirdyear(this.studentdeleteArray.value.Email)
+            .subscribe((result: any) => {
+              if (result) {
+                alert(result.message)
+                location.reload()
+              }
+            }, (result) => {
+              alert(result.error.message)
+            })
+        } else if (this.selectedyear == "fourthyearselected") {
+          this.service.deleteCivilfourthyear(this.studentdeleteArray.value.Email)
+            .subscribe((result: any) => {
+              if (result) {
+                alert(result.message)
+                location.reload()
+              }
+            }, (result) => {
+              alert(result.error.message)
+            })
+        } else {
+          alert("please select any academic year")
+        }
+      }
+
+
+      else if (this.selectedDepartment == "Mechanical Engineering") {
+        if (this.selectedyear == "firstyearselected") {
+          this.service.deleteMechfirstyear(this.studentdeleteArray.value.Email)
+            .subscribe((result: any) => {
+              if (result) {
+                alert(result.message)
+                location.reload()
+              }
+            }, (result) => {
+              alert(result.error.message)
+            })
+        } else if (this.selectedyear == "secondyearselected") {
+          this.service.deleteMechsecondyear(this.studentdeleteArray.value.Email)
+            .subscribe((result: any) => {
+              if (result) {
+                alert(result.message)
+                location.reload()
+              }
+            }, (result) => {
+              alert(result.error.message)
+            })
+        } else if (this.selectedyear == "thirdyearselected") {
+          this.service.deleteMechThirdyear(this.studentdeleteArray.value.Email)
+            .subscribe((result: any) => {
+              if (result) {
+                alert(result.message)
+                location.reload()
+              }
+            }, (result) => {
+              alert(result.error.message)
+            })
+        } else if (this.selectedyear == "fourthyearselected") {
+          this.service.deleteMechfourthyear(this.studentdeleteArray.value.Email)
+            .subscribe((result: any) => {
+              if (result) {
+                alert(result.message)
+                location.reload()
+              }
+            }, (result) => {
+              alert(result.error.message)
+            })
+        } else {
+          alert("please select any academic year")
+        }
+      }
+
+      else {
+        alert("please select any department")
+      }
+    } else {
+      alert('You entered data not in a valid form')
+    }
+  }
+
+
 
 }

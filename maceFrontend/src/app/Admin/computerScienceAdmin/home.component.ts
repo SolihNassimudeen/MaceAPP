@@ -15,6 +15,8 @@ Chart.register(...registerables);
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  
+  AdminName:any
   //notification 
   studentsnumber:any=[]
   facultynumber:any=[]
@@ -30,7 +32,7 @@ export class HomeComponent {
   adminAddanddelete:Number=0
 
   constructor(private route: Router, private validation: FormBuilder, private service: ServiceService) {
-    
+    this.AdminName=JSON.parse(localStorage.getItem('Name')||'')
    }
 
   ngOnInit() {
@@ -107,17 +109,21 @@ export class HomeComponent {
   }
 
   //navigation button
+  home(){
+    this.adminAddanddelete=0
+    location.reload()
+  }
   firstyear() {
-    this.route.navigateByUrl('csadmFirstyear')
+    this.adminAddanddelete=8
   }
   secondyear() {
-    this.route.navigateByUrl('csadmSecondyear')
+    this.adminAddanddelete=9
   }
   thirdyear() {
-    this.route.navigateByUrl('csadmThirdyear')
+    this.adminAddanddelete=10
   }
   fourthyear() {
-    this.route.navigateByUrl('csadmFourthyear')
+    this.adminAddanddelete=11
   }
   //left navigation button
   csadmin() {
@@ -189,7 +195,7 @@ export class HomeComponent {
   }
 
   studentCount(){
-    this.service.studentCount()
+    this.service.CsstudentCount()
     .subscribe((result:any)=>{
       if(result){
         this.studentsnumber.push(result.firstYearCount,result.secondYearCount,result.thirdYearCount,result.fourthYearCount)
@@ -209,5 +215,9 @@ export class HomeComponent {
     },(result)=>{
       alert(result.error.message)
     })
+  }
+
+  ChangePassword(){
+    this.adminAddanddelete=7
   }
 }

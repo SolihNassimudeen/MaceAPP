@@ -1,1 +1,167 @@
-<p>mechadm-home works!</p>
+<div id="main-body">
+    <div class="left_nav">
+        <div class="profile_div pt-5">
+            <img class="w-50" src="../../../../assets/user.png" alt="Profile_pic">
+        </div>
+        <div class="profile_div">
+            <h2 class="Name_heading"><Strong>{{AdminName}}</Strong></h2>
+        </div>
+        <hr>
+        <div class="button_div">
+            <div style="background-color: white; text-align: center;height: 2rem;">
+                <a class="adddelete_hover nav-link dropdown-toggle pt-1" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Admin
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" (click)="adminadd()">Add Admin</a></li>
+                    <li><a class="dropdown-item" (click)="admindelete()">Delete Admin</a></li>
+                </ul>
+            </div>
+
+            <div style="background-color: white; text-align: center;height: 2rem;">
+                <a class="adddelete_hover nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Faculty
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" (click)="facultyadd()">Add Faculty</a></li>
+                    <li><a class="dropdown-item" (click)="facultydelete()">Delete Faculty</a></li>
+                </ul>
+            </div>
+
+            <div style="background-color: white; text-align: center;height: 2rem;">
+                <a class="adddelete_hover nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Student
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" (click)="studentadd()">Add Student</a></li>
+                    <li><a class="dropdown-item" (click)="studentdelete()">Delete Student</a></li>
+                </ul>
+            </div>
+
+            <hr>
+            <div>
+                <button class="w-100 left_div_button" (click)="csadmin()">Computer Science</button>
+            </div>
+            <div>
+                <button class="w-100 left_div_button" (click)="civiladmin()">Civil Engineering</button>
+            </div>
+            <div>
+                <button class="w-100 active_left_button" (click)="mechadmin()">Mechanical Engineering</button>
+            </div>
+        </div>
+        <hr>
+        <div style="background-color: white;">
+            <button class="btn btn-light form-control" (click)="ChangePassword()">Change your password</button>
+        </div>
+        <div class="mt-5" style="background-color: white;">
+            <button class="btn btn-outline-danger form-control" (click)="logout()">Log Out</button>
+        </div>
+    </div>
+   
+    <div class="right_div">
+
+        <div class="navbar_div">
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid p-4">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <button class="btn btn-outline-dark nav_button mx-4" (click)="home()">Home</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="btn btn-outline-dark nav_button mx-4" (click)="firstyear()">Ist
+                                    year</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="btn btn-outline-dark nav_button mx-4" (click)="secondyear()">IInd
+                                    year</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="btn btn-outline-dark nav_button mx-4" (click)="thirdyear()">IIIrd
+                                    year</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="btn btn-outline-dark nav_button" (click)="fourthyear()">IVth
+                                    year</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div>
+            <app-adminadd-delete [Item]="adminAddanddelete" (onCancel)="Addordeletecancel()"></app-adminadd-delete>
+        </div>
+        <div>
+            <app-changepassword [Item]="adminAddanddelete" (onCancel)="Addordeletecancel()"></app-changepassword>
+        </div>
+
+        <div>
+            <app-mechadm-firstyear [Item]="adminAddanddelete"></app-mechadm-firstyear>
+        </div>
+        <div>
+            <app-mechadm-secondyear [Item]="adminAddanddelete"></app-mechadm-secondyear>
+        </div>
+        <div>
+            <app-mechadm-thirdyear [Item]="adminAddanddelete"></app-mechadm-thirdyear>
+        </div>
+        <div>
+            <app-mechadm-fourthyear [Item]="adminAddanddelete"></app-mechadm-fourthyear>
+        </div>
+
+        <div class="right_main p-3" *ngIf="adminAddanddelete==0">
+            <div class="notification_div mt-3">
+                <div class="notification_heading mb-3">
+                    <h3>Updating notifications</h3>
+                </div>
+                <div class="notification_body">
+                    <form (ngSubmit)="notificationupdate()" [formGroup]="notificationarray">
+                        <div class="m-3">
+                            <textarea class="form-control " rows="3" [placeholder]="this.notificationplaceholder1"
+                                formControlName="notification1" name="notification1"></textarea>
+                        </div>
+                        <div class="m-3">
+                            <textarea class="form-control" rows="3" [placeholder]="notificationplaceholder2"
+                                formControlName="notification2" name="notification2"></textarea>
+                        </div>
+                        <div class="m-3">
+                            <textarea class="form-control" rows="3" [placeholder]="notificationplaceholder3"
+                                formControlName="notification3" name="notification3"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-outline-success w-50" type="submit">Update</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="chart_div chartposition_student">
+                <div class="chart_heading w-100 mb-3 ">
+                    <h3>Student count</h3>
+                </div>
+
+                <div class="chart_body">
+                    <canvas id="studentChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart_div chartposition_faculty">
+                <div class="chart_heading">
+                    <h3>Faculty count</h3>
+                </div>
+
+                <div class="chart_body ">
+                    <canvas id="facultyChart"></canvas>
+                </div>
+            </div>
+            <div class="welcome_quotes">
+                <h1><strong>"Welcome to Mechanical Engineering Admin panel"</strong></h1>
+            </div>
+
+        </div>
+    </div>
+</div>

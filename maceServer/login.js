@@ -8,6 +8,8 @@ const adminlogin=(email,password)=>{
                 statusCode:200,
                 status:true,
                 message:'Successfully logged in',
+                Email:result.Email,
+                Name:result.Name
             }
             
         }else{

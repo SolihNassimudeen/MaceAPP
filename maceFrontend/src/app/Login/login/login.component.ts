@@ -14,4 +14,26 @@ export class LoginComponent {
   adminloginpage(){
     this.route.navigateByUrl('adminlogin')
   }
+  departmentCS(){
+
+  }
+  departmentCivil(){
+
+  }
+  departmentMech(){
+
+  }
+
+  firstyearselected(){
+
+  }
+  secondyearselected(){
+
+  }
+  thirdyearselected(){
+
+  }
+  fourthyearselected(){
+    
+  }
 }

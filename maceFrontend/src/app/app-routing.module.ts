@@ -17,12 +17,11 @@ import { MechadmSecondyearComponent } from './Admin/mechanicalEngineering/mechad
 import { MechadmThirdyearComponent } from './Admin/mechanicalEngineering/mechadm-thirdyear/mechadm-thirdyear.component';
 import { AdminLoginComponent } from './Login/admin-login/admin-login.component';
 import { LoginComponent } from './Login/login/login.component';
-import { StudentdetailComponent } from './studentdetail/studentdetail.component';
+
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
   {path:'adminlogin',component:AdminLoginComponent},
-  {path:'studentdetail',component:StudentdetailComponent},
 
   {path:'adminhome',component:HomeComponent},
   {path:'csadmFirstyear',component:CsfirstYearComponent},
