@@ -1,4 +1,23 @@
 <div class="outer_div p-5" *ngIf="Item==11">
+
+    <div class="detail_div" *ngIf="detail_id">
+        <div class="form-control text-center p-4">
+            <div>
+                <h3>{{detail_Name}}</h3>
+                <hr>
+            </div>
+            <div>
+                <P>Registration completion: {{Registration}}</P>
+                <p>Email : {{detail_Email}}</p>
+                <p>Date of Birth : {{detail_DOB}}</p>
+                <p>Contact No : {{contact_No}}</p>
+            </div>
+            <div>
+                <button class="btn btn-outline-danger" (click)="detailcancel()">cancel</button>
+            </div>
+        </div>
+    </div>
+
     <div class="innerdiv form-control">
         <table class="table">
             <thead class="table table-info">

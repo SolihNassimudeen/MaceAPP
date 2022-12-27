@@ -15,6 +15,9 @@ import { MechadmFourthyearComponent } from './Admin/mechanicalEngineering/mechad
 import { MechadmHomeComponent } from './Admin/mechanicalEngineering/mechadm-home/mechadm-home.component';
 import { MechadmSecondyearComponent } from './Admin/mechanicalEngineering/mechadm-secondyear/mechadm-secondyear.component';
 import { MechadmThirdyearComponent } from './Admin/mechanicalEngineering/mechadm-thirdyear/mechadm-thirdyear.component';
+import { CivilfacultyhomeComponent } from './Faculty/CivilFaculty/CivilHome/civilfacultyhome/civilfacultyhome.component';
+import { CsfacultyhomeComponent } from './Faculty/CsFaculty/CsHome/csfacultyhome/csfacultyhome.component';
+import { MechfacultyhomeComponent } from './Faculty/MechFaculty/MechHome/mechfacultyhome/mechfacultyhome.component';
 import { AdminLoginComponent } from './Login/admin-login/admin-login.component';
 import { LoginComponent } from './Login/login/login.component';
 
@@ -40,6 +43,10 @@ const routes: Routes = [
   {path:'mechadmSecondyear',component:MechadmSecondyearComponent},
   {path:'mechadmThirdyear',component:MechadmThirdyearComponent},
   {path:'mechadmFourthyear',component:MechadmFourthyearComponent},
+
+  {path:'civilfacultyhome',component:CivilfacultyhomeComponent},
+  {path:'csfacultyhome',component:CsfacultyhomeComponent},
+  {path:'mechfacultyhome',component:MechfacultyhomeComponent}
 ];
 
 @NgModule({

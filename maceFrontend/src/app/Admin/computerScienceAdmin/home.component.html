@@ -4,7 +4,7 @@
             <img class="w-50" src="../../../assets/user.png" alt="Profile_pic">
         </div>
         <div class="profile_div">
-            <h2 class="Name_heading"><Strong>{{AdminName}}</Strong></h2>
+            <h2 class="Name_heading"><Strong>{{AdminName|uppercase}}</Strong></h2>
         </div>
         <hr>
         <div class="button_div">
@@ -57,7 +57,7 @@
             <button class="btn btn-light form-control" (click)="ChangePassword()">Change your password</button>
         </div>
         <div class="mt-5" style="background-color: white;">
-            <button class="btn btn-outline-danger form-control" (click)="logout()">Log Out</button>
+            <button class="btn btn-outline-danger form-control" style="border: none;" (click)="logout()">Log Out</button>
         </div>
     </div>
    

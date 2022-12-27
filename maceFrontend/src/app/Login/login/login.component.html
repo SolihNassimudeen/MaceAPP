@@ -3,6 +3,7 @@
         <div class="col-1"></div>
         <div class="col-10">
             <div class="login_body">
+
                 <div class="student_div">
                     <div class="w-100 text-center mt-5">
                         <img class="img_border w-25" src="../../../assets/student_icon.jpg" alt="student_icon">
@@ -74,9 +75,9 @@
                     </div>
                     <hr>
                     <div class="p-3 text-center">
-                        <form>
+                        <form (ngSubmit)="facultylogin()" [formGroup]="facultyloginarray">
                             <div class="mb-2">
-                                <input class="form-control" type="text" placeholder="Enter your Email">
+                                <input class="form-control" type="text" placeholder="Enter your Email" formControlName="Email" name="Email" >
                             </div>
 
                             <div class="w-100 mb-2 dropdown_paddingright">
@@ -85,15 +86,15 @@
                                         aria-expanded="false"><span>Department</span>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" (click)="departmentCS()">Computer Science</a></li>
-                                        <li><a class="dropdown-item" (click)="departmentCivil()">Civil Engineering</a></li>
-                                        <li><a class="dropdown-item" (click)="departmentMech()">Mechanical Engineering</a></li>
+                                        <li><a class="dropdown-item" (click)="departmentfacultyCS()">Computer Science</a></li>
+                                        <li><a class="dropdown-item" (click)="departmentfacultyCivil()">Civil Engineering</a></li>
+                                        <li><a class="dropdown-item" (click)="departmentfacultyMech()">Mechanical Engineering</a></li>
                                     </ul>
                                 </div>
                             </div>
 
                             <div>
-                                <input class="form-control" type="password" placeholder="Enter your Password">
+                                <input class="form-control" type="password" placeholder="Enter your Password" formControlName="Password" name="Password" >
                             </div>
                             <div class="mt-5">
                                 <button class="btn btn-outline-secondary w-50"

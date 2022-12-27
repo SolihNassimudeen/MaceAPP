@@ -8,3 +8,8 @@
     background-color: #fff;
     overflow-y: auto;
 }
+
+.detail_div{
+    position: absolute;
+    margin: 7rem 25rem;   
+}

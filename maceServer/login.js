@@ -16,10 +16,71 @@ const adminlogin=(email,password)=>{
             return{
             statusCode:400,
             status:false,
-            message:'loggin failed. Check your email and password'
+            message:'loggin failed. Check your Email and Password'
         }
         }
     })
 }
 
-module.exports={adminlogin}
+const csfaculty=(Email,Password)=>{
+    return mongodb.Csfaculty.findOne({Email,Password})
+    .then(result=>{
+        if(result){
+            return{
+                statusCode:200,
+                status:true,
+                message:'login successful',
+                Name:result.Name,
+                Email:result.Email
+            }
+        }else{
+            return{
+                statusCode:400,
+                status:true,
+                message:'login failed. Check your Email and Password'
+            }
+        }
+    })
+}
+const civilfaculty=(Email,Password)=>{
+    return mongodb.Civilfaculty.findOne({Email,Password})
+    .then(result=>{
+        if(result){
+            return{
+                statusCode:200,
+                status:true,
+                message:'login successful',
+                Name:result.Name,
+                Email:result.Email
+            }
+        }else{
+            return{
+                statusCode:400,
+                status:true,
+                message:'login failed. Check your Email and Password'
+            }
+        }
+    })
+}
+const mechfaculty=(Email,Password)=>{
+    return mongodb.Mechfaculty.findOne({Email,Password})
+    .then(result=>{
+        if(result){
+            return{
+                statusCode:200,
+                status:true,
+                message:'login successful',
+                Name:result.Name,
+                Email:result.Email
+            }
+        }else{
+            return{
+                statusCode:400,
+                status:true,
+                message:'login failed. Check your Email and Password'
+            }
+        }
+    })
+}
+
+module.exports={adminlogin ,csfaculty,civilfaculty,mechfaculty}

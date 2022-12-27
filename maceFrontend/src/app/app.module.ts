@@ -23,6 +23,14 @@ import { MechadmThirdyearComponent } from './Admin/mechanicalEngineering/mechadm
 import { MechadmFourthyearComponent } from './Admin/mechanicalEngineering/mechadm-fourthyear/mechadm-fourthyear.component';
 import { AdminaddDeleteComponent } from './Admin/AdminAddandDelete/adminadd-delete/adminadd-delete.component';
 import { ChangepasswordComponent } from './Admin/changepassword/changepassword.component';
+import { CivilfacultyhomeComponent } from './Faculty/CivilFaculty/CivilHome/civilfacultyhome/civilfacultyhome.component';
+import { CsfacultyhomeComponent } from './Faculty/CsFaculty/CsHome/csfacultyhome/csfacultyhome.component';
+import { MechfacultyhomeComponent } from './Faculty/MechFaculty/MechHome/mechfacultyhome/mechfacultyhome.component';
+import { ChangepasswordFacultyComponent } from './Faculty/ChangePasswordFaculty/changepassword-faculty/changepassword-faculty.component';
+import { CivilFirstyearComponent } from './Faculty/CivilFaculty/civil-firstyear/civil-firstyear.component';
+import { CivilSecondyearComponent } from './Faculty/CivilFaculty/civil-secondyear/civil-secondyear.component';
+import { CivilThirdyearComponent } from './Faculty/CivilFaculty/civil-thirdyear/civil-thirdyear.component';
+import { CivilFourthyearComponent } from './Faculty/CivilFaculty/civil-fourthyear/civil-fourthyear.component';
 
 
 @NgModule({
@@ -46,7 +54,15 @@ import { ChangepasswordComponent } from './Admin/changepassword/changepassword.c
     MechadmThirdyearComponent,
     MechadmFourthyearComponent,
     AdminaddDeleteComponent,
-    ChangepasswordComponent
+    ChangepasswordComponent,
+    CivilfacultyhomeComponent,
+    CsfacultyhomeComponent,
+    MechfacultyhomeComponent,
+    ChangepasswordFacultyComponent,
+    CivilFirstyearComponent,
+    CivilSecondyearComponent,
+    CivilThirdyearComponent,
+    CivilFourthyearComponent
   ],
   imports: [
     BrowserModule,
