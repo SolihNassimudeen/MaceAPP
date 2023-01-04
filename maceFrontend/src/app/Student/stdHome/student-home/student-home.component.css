@@ -1,0 +1,148 @@
+body{
+    margin: auto;
+}
+hr{
+    margin: 0%;
+}
+.first_div{
+    width: 100%;
+    height: 100vh;
+}
+.collegeName{
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5rem;
+    padding-top: .6rem;
+}
+.navbar_bg{
+    background-color: #06a196;
+    color: white;
+}
+.nav_a{
+    color: white;
+    cursor: pointer;
+}
+.nav_a:hover{
+    font-weight: bolder;
+}
+.navul{
+    padding-left: 15rem;
+}
+.navApadding{
+    padding-left: 5rem;
+}
+.homeActive{
+    text-decoration: underline;
+    font-weight: bolder;
+}
+.detailActive{
+    text-decoration: underline;
+    font-weight: bolder;
+}
+.ktunotesActive{
+    text-decoration: underline;
+    font-weight: bolder;
+}
+.abourusActive{
+    text-decoration: underline;
+    font-weight: bolder;
+}
+.row{
+    margin: 0%;
+    padding: auto;
+}
+
+.collegenotification_label{
+    padding-top: 5rem;
+    color: red;
+    text-align: end;
+}
+.collegenotification{
+    padding-top: 2rem;
+}
+.home_maindiv{
+    width: 100%;
+    height: 84%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ktu_notificatindiv{
+    width: 30%;
+    height: 60Vh;
+    border: 1px solid black;
+    border-radius: 20px;
+    position: absolute;
+    margin: 5vmax 10vmax;
+    overflow-y: auto;
+}
+.ktu_notificationdate{
+    font-size: .6rem;
+    font-weight: bold;
+}
+.notification_link{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: .9rem;
+}
+
+
+.detail_div{
+    width: 100%;
+    height: 94vh;
+}
+.detail_label{
+    width: 50%;
+    float: left;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 2vmax 6vmax;
+}
+.detail_data{
+    width: 50%;
+    float: left;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 2vmax 6vmax;
+}
+.input_boxpassword{
+   margin-left: 5vmax;
+}
+
+.ktu_notesdiv{
+    width: 100%;
+    height: 94vh;
+    background-color: rgb(237, 237, 237);
+}
+.ktufirst_div{
+    border-radius: 100%;
+    background-color: white;
+    cursor: pointer;
+}
+.ktufirst_div:hover{
+    -webkit-box-shadow: 0 0 20px rgb(0, 0, 0);
+        box-shadow: 0 0 20px rgb(0, 0, 0);
+}
+
+.aboutus_div{
+    width: 100%;
+    height: 94vh;
+}
+.college_label{
+    font-weight: 700;
+    font-size: 14px;
+    color: #3DB166;
+}
+.aboutus_h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    color: #001845;
+}
+.aboutus_p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #586073;
+}
+.footer_icon{
+    width: 2rem;
+    margin-right: 3rem;
+}

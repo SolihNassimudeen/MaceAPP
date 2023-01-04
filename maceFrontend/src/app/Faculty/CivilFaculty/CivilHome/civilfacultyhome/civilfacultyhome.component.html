@@ -4,7 +4,7 @@
             <img class="w-50" src="../../../../../assets/user.png" alt="Profile_pic">
         </div>
         <div class="profile_div">
-            <h2 class="Name_heading"><Strong>{{FacultyName|uppercase}}</Strong></h2>
+            <h2 class="Name_heading"><Strong>{{Name|uppercase}}</Strong></h2>
         </div>
         <hr>
         <div class="button_div">
@@ -67,10 +67,22 @@
             <app-changepassword-faculty [Item]="selectedpage" (onCancel)="pagecancel()"></app-changepassword-faculty>
         </div>
         <div>
+            <app-adminadd-delete [Item]="selectedpage" (onCancel)="pagecancel()"></app-adminadd-delete>
+        </div>
+        <div>
             <app-civil-firstyear [Item]="selectedpage"></app-civil-firstyear>
         </div>
+        <div>
+            <app-civil-secondyear [Item]="selectedpage"></app-civil-secondyear>
+        </div>
+        <div>
+            <app-civil-thirdyear [Item]="selectedpage"></app-civil-thirdyear>
+        </div>
+        <div>
+            <app-civil-fourthyear [Item]="selectedpage"></app-civil-fourthyear>
+        </div>
 
-        <div class="right_main p-3" *ngIf="selectedpage==0">
+        <div class="right_main p-3" *ngIf="selectedpage==('')">
             <div class="fac_discription">
                 <div class="form-control p-5 text-center">
                     <h3><strong>Our Mission</strong></h3>

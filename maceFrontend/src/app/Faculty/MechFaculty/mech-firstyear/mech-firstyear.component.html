@@ -1,0 +1,175 @@
+<div class="outer_div p-5" *ngIf="Item=='mechfirst'">
+
+    <div class="detail_div" *ngIf="detail_id">
+        <div class="form-control text-center p-4">
+            <div>
+                <h3>{{detail_Name}}</h3>
+                <hr>
+            </div>
+            <div>
+                <P>Registration completion: {{Registration}}</P>
+                <p>Email : {{detail_Email}}</p>
+                <p>Date of Birth : {{detail_DOB}}</p>
+                <p>Contact No : {{contact_No}}</p>
+            </div>
+            <div>
+                <button class="btn btn-outline-danger" (click)="detailcancel()">cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mark_div" *ngIf="Mark_Email">
+        <div class="form-control text-center p-4">
+
+
+            <label><strong>Subject A Mark</strong></label>
+            <div>
+                <form (ngSubmit)="subjectAsubmit()" [formGroup]="subjectAarray">
+                    <div class="float_div w-25 p-1">
+                        <input class="form-control" type="text" formControlName="subjectAFirst" name="subjectAFirst"
+                            placeholder="First series">
+                    </div>
+                    <div class="float_div w-25 p-1">
+                        <input class="form-control" type="text" formControlName="subjectASecond" name="subjectASecond"
+                            placeholder="Second series">
+                    </div>
+                    <div class="float_div w-25 p-1">
+                        <input class="form-control" type="text" formControlName="subjectAThird" name="subjectAThird"
+                            placeholder="Third series">
+                    </div>
+                    <div class="float_div w-25 p-1">
+                        <button type="submit" class="btn btn-primary">submit</button>
+                    </div>
+                </form>
+            </div>
+            <label><strong>Subject B Mark</strong></label>
+            <div>
+                <form (ngSubmit)="subjectBsubmit()" [formGroup]="subjectBarray">
+                    <div class="float_div w-25 p-1">
+                        <input class="form-control" type="text" formControlName="subjectBFirst" name="subjectBFirst"
+                            placeholder="First series">
+                    </div>
+                    <div class="float_div w-25 p-1">
+                        <input class="form-control" type="text" formControlName="subjectBSecond" name="subjectBSecond"
+                            placeholder="Second series">
+                    </div>
+                    <div class="float_div w-25 p-1">
+                        <input class="form-control" type="text" formControlName="subjectBThird" name="subjectBThird"
+                            placeholder="Third series">
+                    </div>
+                    <div class="float_div w-25 p-1">
+                        <button type="submit" class="btn btn-primary">submit</button>
+                    </div>
+                </form>
+            </div>
+            <label><strong>Subject C Mark</strong></label>
+            <div>
+                <form (ngSubmit)="subjectCsubmit()" [formGroup]="subjectCarray">
+                    <div class="float_div w-25 p-1">
+                        <input class="form-control" type="text" formControlName="subjectCFirst" name="subjectCFirst"
+                            placeholder="First series">
+                    </div>
+                    <div class="float_div w-25 p-1">
+                        <input class="form-control" type="text" formControlName="subjectCSecond" name="subjectCSecond"
+                            placeholder="Second series">
+                    </div>
+                    <div class="float_div w-25 p-1">
+                        <input class="form-control" type="text" formControlName="subjectCThird" name="subjectCThird"
+                            placeholder="Third series">
+                    </div>
+                    <div class="float_div w-25 p-1">
+                        <button type="submit" class="btn btn-primary">submit</button>
+                    </div>
+                </form>
+            </div>
+            <label><strong>Subject D Mark</strong></label>
+            <div>
+                <form (ngSubmit)="subjectDsubmit()" [formGroup]="subjectDarray">
+                    <div class="float_div w-25 p-1">
+                        <input class="form-control" type="text" formControlName="subjectDFirst" name="subjectDFirst"
+                            placeholder="First series">
+                    </div>
+                    <div class="float_div w-25 p-1">
+                        <input class="form-control" type="text" formControlName="subjectDSecond" name="subjectDSecond"
+                            placeholder="Second series">
+                    </div>
+                    <div class="float_div w-25 p-1">
+                        <input class="form-control" type="text" formControlName="subjectDThird" name="subjectDThird"
+                            placeholder="Third series">
+                    </div>
+                    <div class="float_div w-25 p-1">
+                        <button type="submit" class="btn btn-primary">submit</button>
+                    </div>
+                </form>
+            </div>
+            <label><strong>Subject E Mark</strong></label>
+            <div>
+                <form (ngSubmit)="subjectEsubmit()" [formGroup]="subjectEarray">
+                    <div class="float_div w-25 p-1">
+                        <input class="form-control" type="text" formControlName="subjectEFirst" name="subjectEFirst"
+                            placeholder="First series">
+                    </div>
+                    <div class="float_div w-25 p-1">
+                        <input class="form-control" type="text" formControlName="subjectESecond" name="subjectESecond"
+                            placeholder="Second series">
+                    </div>
+                    <div class="float_div w-25 p-1">
+                        <input class="form-control" type="text" formControlName="subjectEThird" name="subjectEThird"
+                            placeholder="Third series">
+                    </div>
+                    <div class="float_div w-25 p-1">
+                        <button type="submit" class="btn btn-primary">submit</button>
+                    </div>
+                </form>
+            </div>
+            <label><strong>Subject F Mark</strong></label>
+            <div>
+                <form (ngSubmit)="subjectFsubmit()" [formGroup]="subjectFarray">
+                    <div class="float_div w-25 p-1">
+                        <input class="form-control" type="text" formControlName="subjectFFirst" name="subjectFFirst"
+                            placeholder="First series">
+                    </div>
+                    <div class="float_div w-25 p-1">
+                        <input class="form-control" type="text" formControlName="subjectFSecond" name="subjectFSecond"
+                            placeholder="Second series">
+                    </div>
+                    <div class="float_div w-25 p-1">
+                        <input class="form-control" type="text" formControlName="subjectFThird" name="subjectFThird"
+                            placeholder="Third series">
+                    </div>
+                    <div class="float_div w-25 p-1">
+                        <button type="submit" class="btn btn-primary">submit</button>
+                    </div>
+                </form>
+            </div>
+            <div>
+                <button class="btn btn-outline-danger mt-3 mx-2" (click)="detailcancel()">cancel</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="innerdiv form-control">
+        <table class="table">
+            <thead class="table table-info">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Registration</th>
+                    <th>Details</th>
+                    <th>Add Mark</th>
+                </tr>
+            </thead>
+            <tbody class="table">
+                <tr *ngFor="let data of mechfirstyearArray">
+                    <td>{{data.Name}}</td>
+                    <td>{{data.Email}}</td>
+                    <td>{{data.Registration}}</td>
+                    <td><button class="btn btn-outline-primary" (click)="details(data._id)">Details</button></td>
+                    <td><button class="btn btn-outline-success" (click)="marks(data.Email)">Add Marks</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

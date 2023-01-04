@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4 p-2">
+        <div class="innerdiv text-center p-4">
+            <h2><strong>Student Registration</strong></h2>
+            <hr>
+            <form (ngSubmit)="studentRegistration()" [formGroup]="studentRegistrationArray">
+                <div class="mb-3">
+                    <label for="Name">Name</label>
+                    <input class="form-control text-center" type="text" placeholder="Enter your name" formControlName="Name" name="Name" >
+                </div>
+                <div class="mb-3">
+                    <label for="DOB">Date of Birth</label>
+                    <input class="form-control text-center" type="date" formControlName="DOB" name="DOB">
+                </div>
+                <div class="mb-3">
+                    <label for="contact">Contact Number</label>
+                    <input class="form-control text-center" type="text" placeholder="Enter your contact No." formControlName="ContactNo" name="ContactNo">
+                </div>
+                <div class="mb-3">
+                    <label for="NewPassword">New Password</label>
+                    <input class="form-control text-center" type="password" placeholder="Enter your new Password" formControlName="Password" name="Password">
+                </div>
+                <div class="mt-4">
+                    <button type="submit" class="btn btn-outline-success w-50">Register</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <div class="col-4"></div>
+</div>

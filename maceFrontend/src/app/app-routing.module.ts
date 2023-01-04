@@ -20,6 +20,8 @@ import { CsfacultyhomeComponent } from './Faculty/CsFaculty/CsHome/csfacultyhome
 import { MechfacultyhomeComponent } from './Faculty/MechFaculty/MechHome/mechfacultyhome/mechfacultyhome.component';
 import { AdminLoginComponent } from './Login/admin-login/admin-login.component';
 import { LoginComponent } from './Login/login/login.component';
+import { StudentregistrationComponent } from './Login/studentregistration/studentregistration.component';
+import { StudentHomeComponent } from './Student/stdHome/student-home/student-home.component';
 
 
 const routes: Routes = [
@@ -46,7 +48,10 @@ const routes: Routes = [
 
   {path:'civilfacultyhome',component:CivilfacultyhomeComponent},
   {path:'csfacultyhome',component:CsfacultyhomeComponent},
-  {path:'mechfacultyhome',component:MechfacultyhomeComponent}
+  {path:'mechfacultyhome',component:MechfacultyhomeComponent},
+
+  {path:'studentregistration',component:StudentregistrationComponent},
+  {path:'studenthome',component:StudentHomeComponent}
 ];
 
 @NgModule({

@@ -11,43 +11,31 @@
                     </div>
                     <hr>
                     <div class="p-3 text-center">
-                        <form>
+                        <form (ngSubmit)="studentlogin()" [formGroup]="studentloginarray">
                             <div class="mb-2">
-                                <input class="form-control" type="text" placeholder="Enter your Email">
+                                <input class="form-control" type="text" formControlName="Email" name="Email" placeholder="Enter your Email">
                             </div>
                             <div>
-                                <div class="w-50 mb-2 dropdown_paddingright" style="float:left;">
-                                    <div class="w-100 mb-2 dropdown_paddingright">
-                                        <div class="form-control mb-2" style="text-align: center;height: 2rem; padding-bottom: 1rem;">
-                                            <a class="adddelete_hover nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                                aria-expanded="false"><span>Department</span>
-                                            </a>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" (click)="departmentCS()">Computer Science</a></li>
-                                                <li><a class="dropdown-item" (click)="departmentCivil()">Civil Engineering</a></li>
-                                                <li><a class="dropdown-item" (click)="departmentMech()">Mechanical Engineering</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-        
+                                <div class="w-50 mb-2 dropdown_paddingright">
+                                    <select class="form-control" (change)="stddepartment($event)" >
+                                        <option disabled selected>Department</option>
+                                        <option value="CS">Computer Science</option>
+                                        <option value="Civil">Civil Engineering</option>
+                                        <option value="Mech">Mechanical Engineering</option>
+                                    </select>
                                 </div>
                                 <div class="w-50 mb-2 dropdown_paddingleft" style="float: left;">
-                                    <div class="form-control mb-2" style="text-align: center;height: 2rem; padding-bottom: 1rem;">
-                                        <a class="adddelete_hover nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                            aria-expanded="false">
-                                            Academic year
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" (click)="firstyearselected()">1st year</a></li>
-                                            <li><a class="dropdown-item" (click)="secondyearselected()">2nd year</a></li>
-                                            <li><a class="dropdown-item" (click)="thirdyearselected()">3rd year</a></li>
-                                            <li><a class="dropdown-item" (click)="fourthyearselected()">4th year</a></li>
-                                        </ul>
-                                    </div>
+                                    <select class="form-control" (change)="stdyear($event)" >
+                                        <option disabled selected>Academic Year</option>
+                                        <option value="First">First Year</option>
+                                        <option value="Second">Second Year</option>
+                                        <option value="Third">Third Year</option>
+                                        <option value="Fourth">Fourth Year</option>
+                                    </select>
                                 </div>
                             </div>
                             <div>
-                                <input class="form-control" type="password" placeholder="Enter your Password">
+                                <input class="form-control" type="password" formControlName="Password" name="Password" placeholder="Enter your Password">
                             </div>
                             <div class="mt-5">
                                 <button class="btn btn-outline-secondary w-50"
@@ -81,16 +69,12 @@
                             </div>
 
                             <div class="w-100 mb-2 dropdown_paddingright">
-                                <div class="form-control mb-2" style="text-align: center;height: 2rem; padding-bottom: 1rem;">
-                                    <a class="adddelete_hover nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false"><span>Department</span>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" (click)="departmentfacultyCS()">Computer Science</a></li>
-                                        <li><a class="dropdown-item" (click)="departmentfacultyCivil()">Civil Engineering</a></li>
-                                        <li><a class="dropdown-item" (click)="departmentfacultyMech()">Mechanical Engineering</a></li>
-                                    </ul>
-                                </div>
+                                <select class="form-control" (change)="facdepartment($event)" >
+                                    <option disabled selected>Department</option>
+                                    <option value="CS">Computer Science</option>
+                                    <option value="Civil">Civil Engineering</option>
+                                    <option value="Mech">Mechanical Engineering</option>
+                                </select>
                             </div>
 
                             <div>

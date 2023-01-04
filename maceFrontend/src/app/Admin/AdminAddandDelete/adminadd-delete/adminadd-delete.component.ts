@@ -89,14 +89,8 @@ export class AdminaddDeleteComponent {
   }
 
   //department dropdown
-  departmentCS() {
-    this.selectedDepartment = "Computer Science"
-  }
-  departmentCivil() {
-    this.selectedDepartment = "Civil Engineering"
-  }
-  departmentMech() {
-    this.selectedDepartment = "Mechanical Engineering"
+  department(event:any){
+    this.selectedDepartment=event.target.value
   }
 
   //faculty registration portion
@@ -183,17 +177,8 @@ export class AdminaddDeleteComponent {
   }
 
   //year dropdown
-  firstyearselected() {
-    this.selectedyear = "firstyearselected"
-  }
-  secondyearselected() {
-    this.selectedyear = "secondyearselected"
-  }
-  thirdyearselected() {
-    this.selectedyear = "thirdyearselected"
-  }
-  fourthyearselected() {
-    this.selectedyear = "fourthyearselected"
+  stdyear(event:any){
+    this.selectedyear=event.target.value
   }
 
   //add student

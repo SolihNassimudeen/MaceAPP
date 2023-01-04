@@ -18,32 +18,41 @@ export class CivilFirstyearComponent {
   detail_DOB: any
   contact_No: any
   Mark_Email:any
-  markArray=this.validation.group({
+  
+  subjectAarray=this.validation.group({
     subjectAFirst:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]],
     subjectASecond:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]],
-    subjectAThird:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]],
-    subjectAFinal:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]],
+    subjectAThird:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]]
+  })
+
+  subjectBarray=this.validation.group({
     subjectBFirst:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]],
     subjectBSecond:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]],
-    subjectBThird:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]],
-    subjectBFinal:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]],
+    subjectBThird:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]]
+  })
+
+  subjectCarray=this.validation.group({
     subjectCFirst:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]],
     subjectCSecond:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]],
-    subjectCThird:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]],
-    subjectCFinal:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]],
+    subjectCThird:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]]
+  })
+
+  subjectDarray=this.validation.group({
     subjectDFirst:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]],
     subjectDSecond:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]],
-    subjectDThird:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]],
-    subjectDFinal:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]],
+    subjectDThird:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]]
+  })
+
+  subjectEarray=this.validation.group({
     subjectEFirst:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]],
     subjectESecond:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]],
     subjectEThird:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]],
-    subjectEFinal:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]],
+  })
+
+  subjectFarray=this.validation.group({
     subjectFFirst:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]],
     subjectFSecond:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]],
-    subjectFThird:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]],
-    subjectFFinal:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]],
-    
+    subjectFThird:['',[Validators.pattern('[0-9]*'),Validators.maxLength(3)]] 
   })
 
   constructor(private service:ServiceService, private validation:FormBuilder){}
@@ -79,11 +88,10 @@ export class CivilFirstyearComponent {
     this.Mark_Email=Email
   }
 
-  submit(){
-    if(this.markArray.valid){
-      console.log(this.Mark_Email);
-      
-      this.service.civilfirstyearmark(this.Mark_Email,this.markArray.value.subjectAFirst,this.markArray.value.subjectASecond,this.markArray.value.subjectAThird,this.markArray.value.subjectAFinal,this.markArray.value.subjectBFirst,this.markArray.value.subjectBSecond,this.markArray.value.subjectBThird,this.markArray.value.subjectBFinal,this.markArray.value.subjectCFirst,this.markArray.value.subjectCSecond,this.markArray.value.subjectCThird,this.markArray.value.subjectCFinal,this.markArray.value.subjectDFirst,this.markArray.value.subjectDSecond,this.markArray.value.subjectDThird,this.markArray.value.subjectDFinal,this.markArray.value.subjectEFirst,this.markArray.value.subjectESecond,this.markArray.value.subjectEThird,this.markArray.value.subjectFFinal,this.markArray.value.subjectFFirst,this.markArray.value.subjectFSecond,this.markArray.value.subjectFThird,this.markArray.value.subjectFFinal)
+
+  subjectAsubmit(){
+    if(this.subjectAarray.valid){
+      this.service.civilfirstyearsubA(this.Mark_Email,this.subjectAarray.value.subjectAFirst,this.subjectAarray.value.subjectASecond,this.subjectAarray.value.subjectAThird)
       .subscribe((result:any)=>{
         if(result){
           alert(result.message)
@@ -92,7 +100,89 @@ export class CivilFirstyearComponent {
       },(result)=>{
         alert(result.error.message)
       })
-
+    }
+    else{
+      alert('Entered data not in a valid form')
+    }
+  }
+  subjectBsubmit(){
+    if(this.subjectBarray.valid){
+      this.service.civilfirstyearsubB(this.Mark_Email,this.subjectBarray.value.subjectBFirst,this.subjectBarray.value.subjectBSecond,this.subjectBarray.value.subjectBThird)
+      .subscribe((result:any)=>{
+        if(result){
+          alert(result.message)
+          location.reload()
+        }
+      },(result)=>{
+        alert(result.error.message)
+      })
+    }
+    else{
+      alert('Entered data not in a valid form')
+    }
+  }
+  subjectCsubmit(){
+    if(this.subjectCarray.valid){
+      this.service.civilfirstyearsubC(this.Mark_Email,this.subjectCarray.value.subjectCFirst,this.subjectCarray.value.subjectCSecond,this.subjectCarray.value.subjectCThird)
+      .subscribe((result:any)=>{
+        if(result){
+          alert(result.message)
+          location.reload()
+        }
+      },(result)=>{
+        alert(result.error.message)
+      })
+    }
+    else{
+      alert('Entered data not in a valid form')
+    }
+  }
+  subjectDsubmit(){
+    if(this.subjectDarray.valid){
+      this.service.civilfirstyearsubD(this.Mark_Email,this.subjectDarray.value.subjectDFirst,this.subjectDarray.value.subjectDSecond,this.subjectDarray.value.subjectDThird)
+      .subscribe((result:any)=>{
+        if(result){
+          alert(result.message)
+          location.reload()
+        }
+      },(result)=>{
+        alert(result.error.message)
+      })
+    }
+    else{
+      alert('Entered data not in a valid form')
+    }
+  }
+  subjectEsubmit(){
+    if(this.subjectEarray.valid){
+      this.service.civilfirstyearsubE(this.Mark_Email,this.subjectEarray.value.subjectEFirst,this.subjectEarray.value.subjectESecond,this.subjectEarray.value.subjectEThird)
+      .subscribe((result:any)=>{
+        if(result){
+          alert(result.message)
+          location.reload()
+        }
+      },(result)=>{
+        alert(result.error.message)
+      })
+    }
+    else{
+      alert('Entered data not in a valid form')
+    }
+  }
+  subjectFsubmit(){
+    if(this.subjectFarray.valid){      
+      this.service.civilfirstyearsubF(this.Mark_Email,this.subjectFarray.value.subjectFFirst,this.subjectFarray.value.subjectFSecond,this.subjectFarray.value.subjectFThird)
+      .subscribe((result:any)=>{
+        if(result){
+          alert(result.message)
+          location.reload()
+        }
+      },(result)=>{
+        alert(result.error.message)
+      })
+    }
+    else{
+      alert('Entered data not in a valid form')
     }
   }
 

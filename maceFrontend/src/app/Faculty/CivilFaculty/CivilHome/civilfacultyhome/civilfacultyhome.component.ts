@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ServiceService } from 'src/app/service.service';
 
 @Component({
@@ -8,14 +9,14 @@ import { ServiceService } from 'src/app/service.service';
 })
 export class CivilfacultyhomeComponent {
 
-  FacultyName: any
-  selectedpage: Number = 0
+  Name: any
+  selectedpage: any=''
   Notification1: any
   Notification2: any
   Notification3: any
 
-  constructor(private service: ServiceService) {
-    this.FacultyName = JSON.parse(localStorage.getItem('Facultyname') || '')
+  constructor(private service: ServiceService,private route:Router) {
+    this.Name = JSON.parse(localStorage.getItem('Name') || '')
   }
 
   ngOnInit() {
@@ -34,23 +35,35 @@ export class CivilfacultyhomeComponent {
   }
 
   pagecancel() {
-    this.selectedpage = 0
+    this.selectedpage = ""
   }
-  studentadd() { }
-  studentdelete() { }
+  studentadd() { 
+    this.selectedpage=5
+  }
+  studentdelete() {
+    this.selectedpage=6
+   }
   ChangePassword() {
     this.selectedpage = 1
   }
-  logout() { }
+  logout() { 
+    this.route.navigateByUrl('')
+  }
 
   home() { 
-    this.selectedpage=0
+    this.selectedpage=""
   }
   firstyear() {
-    this.selectedpage=4
+    this.selectedpage="civilfirst"
    }
-  secondyear() { }
-  thirdyear() { }
-  fourthyear() { }
+  secondyear() { 
+    this.selectedpage="civilsecond"
+  }
+  thirdyear() {
+    this.selectedpage="civilthird"
+   }
+  fourthyear() {
+    this.selectedpage="civilfourth"
+   }
 
 }

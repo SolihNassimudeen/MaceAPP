@@ -1,0 +1,324 @@
+<div class="first_div">
+    <nav class="navbar navbar-expand-lg navbar_bg fixed-top">
+        <div class="container-fluid">
+            <p class="collegeName"><strong>Muslim Association College of Engineering</strong></p>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 navul">
+                    <li class="nav-item ">
+                        <a class="nav-link nav_a" role="button" aria-current="page" (click)="homescroll()">Home</a>
+                    </li>
+                    <li class="nav-item navApadding">
+                        <a class="nav-link nav_a" role="button" (click)="detailsscroll()" >Details</a>
+                    </li>
+                    <li class="nav-item navApadding">
+                        <a class="nav-link nav_a" aria-current="page" role="button" (click)="ktunonescroll()">KTU Notes</a>
+                    </li>
+                    <li class="nav-item navApadding">
+                        <a class="nav-link nav_a" role="button" (click)="aboutusscroll()" >About us</a>
+                    </li>
+                    <li class="nav-item navApadding">
+                        <button class="btn btn-danger" (click)="logout()" >Log Out</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-4 collegenotification_label">
+            <p><strong>College Notification : </strong></p>
+        </div>
+        <div class="col-8 collegenotification">
+            <marquee class="mt-5" style="color: red;">* {{this.Notification1}} * {{this.Notification2}} *
+                {{this.Notification3}}</marquee>
+        </div>
+    </div>
+    <hr>
+    <div class="home_maindiv" style="background-image: url(https://wallpaperaccess.com/full/1771974.jpg);">
+        <div class="ktu_notificatindiv p-3">
+            <div class="text-center">
+                <h4 style="color: blue;"><strong>KTU Notification</strong></h4>
+                <hr>
+            </div>
+            <div *ngFor="let data of ktunotificationarray">
+                <div class="ktu_notificationdate">{{data.date}}</div>
+                <a class="notification_link" href="https://ktu.edu.in/eu/core/announcements.htm">{{data.title}}</a>
+                <hr>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="detail_div">
+    <div class="text-center p-5">
+        <h3 style="font-family: 'Libre Baskerville', serif;text-decoration: underline; color: rgb(44, 44, 80);">
+            <strong>Details</strong>
+        </h3>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="text-center">
+                <img class="w-25" src="../../../../assets/student_icon.jpg" alt="student_icon">
+            </div>
+            <div class="text-center">
+                <h3><strong>{{studentName|uppercase}}</strong></h3>
+            </div>
+            <div class="detail_label">
+                <div class="mb-2">
+                    <span>Email : </span>
+                </div>
+                <div class="mb-2">
+                    <span>Date Of Birth : </span>
+                </div>
+                <div class="mb-2">
+                    <span>Contact Number : </span>
+                </div>
+            </div>
+            <div class="detail_data">
+                <div class="mb-2">
+                    <span>{{studentEmail}}</span>
+                </div>
+                <div class="mb-2">
+                    <span>{{studentDOB|date:'shortDate'}}</span>
+                </div>
+                <div class="mb-2">
+                    <span>{{studentContact}}</span>
+                </div>
+            </div>
+            <form (ngSubmit)="passwordChange()" [formGroup]="studentpasswordchangearray">
+                <div class="text-center">
+                    <label for="password"><strong>Change Password</strong></label>
+                    <input class="form-control input_boxpassword w-75 mt-2 text-center" formControlName="Password"
+                        name="Password" type="text">
+                </div>
+                <div class="text-center mt-3">
+                    <button type="submit" class="btn btn-outline-primary w-50">Change Now</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-6">
+            <div class="text-center">
+                <h3 style="text-decoration: underline;"><strong>Series Marks</strong></h3>
+            </div>
+            <div class="pt-5 mt-5">
+                <table class="table">
+                    <thead class="thead-light table table-primary">
+                        <tr>
+                            <th>Subject</th>
+                            <th>First Series</th>
+                            <th>Second Series</th>
+                            <th>Third Series</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table table-light">
+                        <tr>
+                            <td>Subject A</td>
+                            <td>{{subAfirst}}</td>
+                            <td>{{subAsecond}}</td>
+                            <td>{{subAthird}}</td>
+                        </tr>
+                        <tr>
+                            <td>Subject B</td>
+                            <td>{{subBfirst}}</td>
+                            <td>{{subBsecond}}</td>
+                            <td>{{subBthird}}</td>
+                        </tr>
+                        <tr>
+                            <td>Subject C</td>
+                            <td>{{subCfirst}}</td>
+                            <td>{{subCsecond}}</td>
+                            <td>{{subCthird}}</td>
+                        </tr>
+                        <tr>
+                            <td>Subject D</td>
+                            <td>{{subDfirst}}</td>
+                            <td>{{subDsecond}}</td>
+                            <td>{{subDthird}}</td>
+                        </tr>
+                        <tr>
+                            <td>Subject E</td>
+                            <td>{{subEfirst}}</td>
+                            <td>{{subEsecond}}</td>
+                            <td>{{subEthird}}</td>
+                        </tr>
+                        <tr>
+                            <td>Subject F</td>
+                            <td>{{subFfirst}}</td>
+                            <td>{{subFsecond}}</td>
+                            <td>{{subFthird}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ktu_notesdiv pt-5">
+    <div class="text-center pb-5">
+        <h3 style="font-family: 'Libre Baskerville', serif;text-decoration: underline; color: rgb(44, 44, 80);">
+            <strong>KTU Notes</strong>
+        </h3>
+    </div>
+    <div class="pt-5">
+        <div class="row">
+            <div class="col text-center p-5">
+                <div class="ktufirst_div p-5"><a href="https://www.ktunotes.in">
+                        <img class="w-50" src="../../../../assets/ktunotes.png" alt="ktunotes">
+                        <p>KTUNOTES</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col text-center p-5">
+                <div class="ktufirst_div p-5"><a href="https://www.ktuassist.in/">
+                        <img class="w-50" src="../../../../assets/ktuassist.png" alt="ktuassist">
+                        <p>KTU ASSIST</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col text-center p-5">
+                <div class="ktufirst_div p-5"><a href="https://www.ktustudents.in/p/notes.html">
+                        <img class="w-50" src="../../../../assets/ktustudents.png" alt="ktustudents">
+                        <p>KTU STUDENTs</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col text-center p-5">
+                <div class="ktufirst_div p-5"><a href="https://www.ktuqbank.com/p/ktu-btech-study-materials.html">
+                        <img class="w-50" src="../../../../assets/ktuQbank.png" alt="ktuQbank">
+                        <p>KTU Q BANK</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="aboutus_div">
+    <div class="text-center pt-4">
+        <h3 style="font-family: 'Libre Baskerville', serif;text-decoration: underline; color: rgb(44, 44, 80);">
+            <strong>About Us</strong>
+        </h3>
+    </div>
+    <div class="row pt-2">
+        <div class="col-3"></div>
+        <div class="col-6 text-center">
+            <label class="college_label">ABOUT MUSLIM ASSOCIATION COLLEGE OF ENGINEERING</label>
+            <h2 class="aboutus_h2">We always provide everyone with education that exceeds expectations.</h2>
+            <p class="aboutus_p">MACE transforms youngsters who arrive at our campus, to astute professionals who could
+                redefine the
+                future of the engineering world.
+                We equip our students with the core skills required for successful engineering careers.In an era of ever
+                evolving technological advancements,
+                we help our students to stay ahead of the curve and to stay relevant.</p>
+        </div>
+        <div class="col-3"></div>
+    </div>
+    <div class="row pt-5">
+        <div class="col-5 text-center">
+            <label class="college_label">OUR VISION</label>
+            <p class="aboutus_p">"Muslim Association College of Engineering (MACE) will have a transformative impact on
+                society
+                through continual innovation in education, research, creativity and entrepreneurship. It will
+                meet the global competitive expectations of a rapidly changing technology driven society and
+                mould a generation of innovative leaders with commitment and confidence."</p>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-5 text-center">
+            <label class="college_label">OUR MISSION</label>
+            <p class="aboutus_p">"To create an educational experience for students focused on deep disciplinary
+                knowledge,
+                problem solving, leadership, communication and interpersonal skills. To cultivate a transformative
+                college community committed to a free exchange of ideas and a collaborative environment where critical
+                and creative innovation and entrepreneurship can flourish in which students can achieve their full
+                potential.
+                To impart an education that triggers the holistic development of the student and makes him a responsible
+                citizen."</p>
+        </div>
+    </div>
+</div>
+
+<div>
+    <footer class="text-center text-lg-start text-dark" style="background-color: #dfcaca">
+        <section class="d-flex justify-content-between p-3 text-white" style="background-color: #06a196">
+            <div class="me-5">
+                <span>Get connected with us on social networks:</span>
+            </div>
+            <div>
+                <a href="https://www.instagram.com/maceofficial2020/"><img class="footer_icon"
+                        src="../../../../../assets/icons8-instagram-48.png" alt="insta-icon"></a>
+                <a href="https://www.facebook.com/macevenjmd/"><img class="footer_icon"
+                        src="../../../../../assets/icons8-facebook-48.png" alt="facebook_icon"></a>
+                <a href="https://www.youtube.com/@muslimassociationcollegeof121/streams"><img class="footer_icon"
+                        src="../../../../../assets/icons8-youtube-48.png" alt="youTube-icon"></a>
+            </div>
+        </section>
+        <section>
+            <div class="container text-center text-md-start mt-5">
+                <div class="row mt-3">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold">Muslim Association College of Engineering</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p style="font-family: 'Dancing Script', cursive;font-size: 1.5rem;">
+                            "Do something now; your future self will thank you for later."
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Used links</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p>
+                            <a role="button" (click)="homescroll()" class="text-dark">Home</a>
+                        </p>
+                        <p>
+                            <a role="button" (click)="detailsscroll()" class="text-dark">Details</a>
+                        </p>
+                        <p>
+                            <a role="button" (click)="ktunonescroll" class="text-dark">KTU Notes</a>
+                        </p>
+                        <p>
+                            <a role="button" (click)="aboutusscroll()" class="text-dark">About Us</a>
+                        </p>
+                    </div>
+                   
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        
+                        <h6 class="text-uppercase fw-bold">Useful links</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p>
+                            <a href="https://www.instagram.com/maceofficial2020/" class="text-dark">instagram</a>
+                        </p>
+                        <p>
+                            <a href="https://www.facebook.com/macevenjmd/" class="text-dark">facebook</a>
+                        </p>
+                        <p>
+                            <a href="https://www.youtube.com/@muslimassociationcollegeof121/streams" class="text-dark">youtube</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h6 class="text-uppercase fw-bold">Contact</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p> Muslim Association College of Engineering,</p>
+                        <p> Venjaramoodu</p>
+                        <p> Kerala, Trivandrum</p>
+                        <p> 695607</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2023 Copyright:
+            <a class="text-dark" href="https://www.instagram.com/so_li_h__/">Solih N</a>
+        </div>
+    </footer>
+</div>

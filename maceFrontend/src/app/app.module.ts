@@ -31,6 +31,16 @@ import { CivilFirstyearComponent } from './Faculty/CivilFaculty/civil-firstyear/
 import { CivilSecondyearComponent } from './Faculty/CivilFaculty/civil-secondyear/civil-secondyear.component';
 import { CivilThirdyearComponent } from './Faculty/CivilFaculty/civil-thirdyear/civil-thirdyear.component';
 import { CivilFourthyearComponent } from './Faculty/CivilFaculty/civil-fourthyear/civil-fourthyear.component';
+import { CsFirstyearComponent } from './Faculty/CsFaculty/cs-firstyear/cs-firstyear.component';
+import { MechFirstyearComponent } from './Faculty/MechFaculty/mech-firstyear/mech-firstyear.component';
+import { CsSecondyearComponent } from './Faculty/CsFaculty/cs-secondyear/cs-secondyear.component';
+import { MechSecondyearComponent } from './Faculty/MechFaculty/mech-secondyear/mech-secondyear.component';
+import { CsThirdyearComponent } from './Faculty/CsFaculty/cs-thirdyear/cs-thirdyear.component';
+import { MechThirdyearComponent } from './Faculty/MechFaculty/mech-thirdyear/mech-thirdyear.component';
+import { CsFourthyearComponent } from './Faculty/CsFaculty/cs-fourthyear/cs-fourthyear.component';
+import { MechFourthyearComponent } from './Faculty/MechFaculty/mech-fourthyear/mech-fourthyear.component';
+import { StudentregistrationComponent } from './Login/studentregistration/studentregistration.component';
+import { StudentHomeComponent } from './Student/stdHome/student-home/student-home.component';
 
 
 @NgModule({
@@ -62,7 +72,17 @@ import { CivilFourthyearComponent } from './Faculty/CivilFaculty/civil-fourthyea
     CivilFirstyearComponent,
     CivilSecondyearComponent,
     CivilThirdyearComponent,
-    CivilFourthyearComponent
+    CivilFourthyearComponent,
+    CsFirstyearComponent,
+    MechFirstyearComponent,
+    CsSecondyearComponent,
+    MechSecondyearComponent,
+    CsThirdyearComponent,
+    MechThirdyearComponent,
+    CsFourthyearComponent,
+    MechFourthyearComponent,
+    StudentregistrationComponent,
+    StudentHomeComponent
   ],
   imports: [
     BrowserModule,

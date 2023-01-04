@@ -1,0 +1,86 @@
+/* left side portion and nav */
+.left_nav {
+    width: 16%;
+    background-color: #ce7ff0;
+    height: 100vh;
+    border-right: 1px solid rgb(240, 238, 238);
+    float: left;
+}
+.profile_div {
+    width: 100%;
+    text-align: center;
+}
+
+.Name_heading {
+    font-family: 'Yeseva One', cursive;
+    padding-top: 20px;
+}
+
+.left_div_button {
+    width: 100%;
+    border: none;
+    background-color: white;
+    height: 40px;
+}
+.left_div_button:hover{
+    background-color: rgb(240, 238, 238);
+}
+.adddelete_hover{
+    cursor: pointer;
+}
+.adddelete_hover:hover{
+    background-color: rgb(240, 238, 238);
+}
+.log_out{
+    margin-top: 20vmax;
+}
+
+
+.right_upper_div {
+    width: 100%;
+    height: 20vh;
+    background-color: white;
+}
+.right_div {
+    width: 84%;
+    margin-left: 16%;
+    height: 100vh;
+    background-color: rgb(240, 238, 238);
+}
+
+/* nav bar portion */
+.nav_button{
+    width: 200px;
+    font-family: 'Playfair Display', serif;
+}
+
+.fac_discription{
+    width: 40%;
+    float: left;
+}
+.college_icon{
+    width: 20%;
+    float: left;
+    padding: 100px 10px 100px 10px;
+}
+/* notification portion */
+.notification_div{
+    width: 40%;
+    float: left;
+}
+
+.notification_input{
+    height: 100px;
+    width: 100%;
+}
+
+.welcome_quotes{
+    position: absolute;
+    margin-top: 68vh;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 1vmax;
+    background-color: #fff;
+    margin-left: 17vmax;
+    font-family: 'Dancing Script', cursive;
+}

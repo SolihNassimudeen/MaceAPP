@@ -507,21 +507,25 @@ const deleteCsfirstyear=(Email)=>{
     return mongodb.Csfirstyear.deleteOne({ Email })
         .then(result => {
             if (result) {
-                if (result.deletedCount == 0) {
-                    return {
-                        statusCode: 400,
-                        status: false,
-                        message: 'Not such an Account',
-                        result
+                return mongodb.Csfirstyearmark.deleteOne({Email})
+                .then(ans=>{
+                    if (result.deletedCount == 0) {
+                        return {
+                            statusCode: 400,
+                            status: false,
+                            message: 'Not such an Account',
+                            result
+                        }
+                       
+                    } else {
+                        return {
+                            statusCode: 200,
+                            status: true,
+                            message: 'Account deletion success',
+                        }
                     }
-                } else {
-                    return {
-                        statusCode: 200,
-                        status: true,
-                        message: 'Account deletion success',
-                    }
-                }
-
+                })
+                
             }
         })
 }
@@ -529,21 +533,25 @@ const deleteCssecondyear=(Email)=>{
     return mongodb.Cssecondyear.deleteOne({ Email })
         .then(result => {
             if (result) {
-                if (result.deletedCount == 0) {
-                    return {
-                        statusCode: 400,
-                        status: false,
-                        message: 'Not such an Account',
-                        result
+                return mongodb.Cssecondyearmark.deleteOne({Email})
+                .then(ans=>{
+                    if (result.deletedCount == 0) {
+                        return {
+                            statusCode: 400,
+                            status: false,
+                            message: 'Not such an Account',
+                            result
+                        }
+                    } else {
+                        return {
+                            statusCode: 200,
+                            status: true,
+                            message: 'Account deletion success',
+                        }
                     }
-                } else {
-                    return {
-                        statusCode: 200,
-                        status: true,
-                        message: 'Account deletion success',
-                    }
-                }
-
+    
+                })
+               
             }
         })
 }
@@ -551,21 +559,25 @@ const deleteCsThirdyear=(Email)=>{
     return mongodb.Csthirdyear.deleteOne({ Email })
         .then(result => {
             if (result) {
-                if (result.deletedCount == 0) {
-                    return {
-                        statusCode: 400,
-                        status: false,
-                        message: 'Not such an Account',
-                        result
+                return mongodb.Csthirdyearmark.deleteOne({Email})
+                .then(ans=>{
+                    if (result.deletedCount == 0) {
+                        return {
+                            statusCode: 400,
+                            status: false,
+                            message: 'Not such an Account',
+                            result
+                        }
+                    } else {
+                        return {
+                            statusCode: 200,
+                            status: true,
+                            message: 'Account deletion success',
+                        }
                     }
-                } else {
-                    return {
-                        statusCode: 200,
-                        status: true,
-                        message: 'Account deletion success',
-                    }
-                }
-
+    
+                })
+                
             }
         })
 }
@@ -573,21 +585,25 @@ const deleteCsfourthyear=(Email)=>{
     return mongodb.Csfourthyear.deleteOne({ Email })
         .then(result => {
             if (result) {
-                if (result.deletedCount == 0) {
-                    return {
-                        statusCode: 400,
-                        status: false,
-                        message: 'Not such an Account',
-                        result
+                return mongodb.Csfourthyear.deleteOne({Email})
+                .then(ans=>{
+                    if (result.deletedCount == 0) {
+                        return {
+                            statusCode: 400,
+                            status: false,
+                            message: 'Not such an Account',
+                            result
+                        }
+                    } else {
+                        return {
+                            statusCode: 200,
+                            status: true,
+                            message: 'Account deletion success',
+                        }
                     }
-                } else {
-                    return {
-                        statusCode: 200,
-                        status: true,
-                        message: 'Account deletion success',
-                    }
-                }
-
+    
+                })
+               
             }
         })
 }
@@ -597,21 +613,25 @@ const deleteCivilfirstyear=(Email)=>{
     return mongodb.Civilfirstyear.deleteOne({ Email })
         .then(result => {
             if (result) {
-                if (result.deletedCount == 0) {
-                    return {
-                        statusCode: 400,
-                        status: false,
-                        message: 'Not such an Account',
-                        result
+                return mongodb.Civilfirstyearmark.deleteOne({Email})
+                .then(ans=>{
+                    if (result.deletedCount == 0) {
+                        return {
+                            statusCode: 400,
+                            status: false,
+                            message: 'Not such an Account',
+                            result
+                        }
+                    } else {
+                        return {
+                            statusCode: 200,
+                            status: true,
+                            message: 'Account deletion success',
+                        }
                     }
-                } else {
-                    return {
-                        statusCode: 200,
-                        status: true,
-                        message: 'Account deletion success',
-                    }
-                }
-
+    
+                })
+                
             }
         })
 }
@@ -619,28 +639,35 @@ const deleteCivilsecondyear=(Email)=>{
     return mongodb.Civilsecondyear.deleteOne({ Email })
         .then(result => {
             if (result) {
-                if (result.deletedCount == 0) {
-                    return {
-                        statusCode: 400,
-                        status: false,
-                        message: 'Not such an Account',
-                        result
+                return mongodb.Civilsecondyearmark.deleteOne({Email})
+                .then(result=>{
+                    if (result.deletedCount == 0) {
+                        return {
+                            statusCode: 400,
+                            status: false,
+                            message: 'Not such an Account',
+                            result
+                        }
+                    } else {
+                        return {
+                            statusCode: 200,
+                            status: true,
+                            message: 'Account deletion success',
+                        }
                     }
-                } else {
-                    return {
-                        statusCode: 200,
-                        status: true,
-                        message: 'Account deletion success',
-                    }
-                }
-
+    
+                })
+              
             }
         })
 }
 const deleteCivilThirdyear=(Email)=>{
     return mongodb.Civilthirdyear.deleteOne({ Email })
         .then(result => {
+            
             if (result) {
+                return mongodb.Civilthirdyearmark.deleteOne({Email})
+            .then(ans=>{
                 if (result.deletedCount == 0) {
                     return {
                         statusCode: 400,
@@ -655,6 +682,7 @@ const deleteCivilThirdyear=(Email)=>{
                         message: 'Account deletion success',
                     }
                 }
+            })
 
             }
         })
@@ -663,21 +691,25 @@ const deleteCivilfourthyear=(Email)=>{
     return mongodb.Civilfourthyear.deleteOne({ Email })
         .then(result => {
             if (result) {
-                if (result.deletedCount == 0) {
-                    return {
-                        statusCode: 400,
-                        status: false,
-                        message: 'Not such an Account',
-                        result
+                return mongodb.Civilfourthyearmark.deleteOne({Email})
+                .then(ans=>{
+                    if (result.deletedCount == 0) {
+                        return {
+                            statusCode: 400,
+                            status: false,
+                            message: 'Not such an Account',
+                            result
+                        }
+                    } else {
+                        return {
+                            statusCode: 200,
+                            status: true,
+                            message: 'Account deletion success',
+                        }
                     }
-                } else {
-                    return {
-                        statusCode: 200,
-                        status: true,
-                        message: 'Account deletion success',
-                    }
-                }
-
+    
+                })
+               
             }
         })
 }
@@ -687,21 +719,25 @@ const deleteMechfirstyear=(Email)=>{
     return mongodb.Mechfirstyear.deleteOne({ Email })
         .then(result => {
             if (result) {
-                if (result.deletedCount == 0) {
-                    return {
-                        statusCode: 400,
-                        status: false,
-                        message: 'Not such an Account',
-                        result
+                return mongodb.Mechfirstyearmark.deleteOne({Email})
+                .then(ans=>{
+                    if (result.deletedCount == 0) {
+                        return {
+                            statusCode: 400,
+                            status: false,
+                            message: 'Not such an Account',
+                            result
+                        }
+                    } else {
+                        return {
+                            statusCode: 200,
+                            status: true,
+                            message: 'Account deletion success',
+                        }
                     }
-                } else {
-                    return {
-                        statusCode: 200,
-                        status: true,
-                        message: 'Account deletion success',
-                    }
-                }
-
+    
+                })
+                
             }
         })
 }
@@ -709,21 +745,25 @@ const deleteMechsecondyear=(Email)=>{
     return mongodb.Mechsecondyear.deleteOne({ Email })
         .then(result => {
             if (result) {
-                if (result.deletedCount == 0) {
-                    return {
-                        statusCode: 400,
-                        status: false,
-                        message: 'Not such an Account',
-                        result
+                return mongodb.Mechsecondyearmark.deleteOne({Email})
+                .then(ans=>{
+                    if (result.deletedCount == 0) {
+                        return {
+                            statusCode: 400,
+                            status: false,
+                            message: 'Not such an Account',
+                            result
+                        }
+                    } else {
+                        return {
+                            statusCode: 200,
+                            status: true,
+                            message: 'Account deletion success',
+                        }
                     }
-                } else {
-                    return {
-                        statusCode: 200,
-                        status: true,
-                        message: 'Account deletion success',
-                    }
-                }
-
+    
+                })
+               
             }
         })
 }
@@ -731,20 +771,24 @@ const deleteMechThirdyear=(Email)=>{
     return mongodb.Mechthirdyear.deleteOne({ Email })
         .then(result => {
             if (result) {
-                if (result.deletedCount == 0) {
-                    return {
-                        statusCode: 400,
-                        status: false,
-                        message: 'Not such an Account',
-                        result
+                return mongodb.Mechfirstyear.deleteOne({Email})
+                .then(ans=>{
+                    if (result.deletedCount == 0) {
+                        return {
+                            statusCode: 400,
+                            status: false,
+                            message: 'Not such an Account',
+                            result
+                        }
+                    } else {
+                        return {
+                            statusCode: 200,
+                            status: true,
+                            message: 'Account deletion success',
+                        }
                     }
-                } else {
-                    return {
-                        statusCode: 200,
-                        status: true,
-                        message: 'Account deletion success',
-                    }
-                }
+                })
+                
 
             }
         })
@@ -753,20 +797,24 @@ const deleteMechfourthyear=(Email)=>{
     return mongodb.Mechfourthyear.deleteOne({ Email })
         .then(result => {
             if (result) {
-                if (result.deletedCount == 0) {
-                    return {
-                        statusCode: 400,
-                        status: false,
-                        message: 'Not such an Account',
-                        result
+                return mongodb.Mechfourthyearmark.deleteOne({Email})
+                .then(ans=>{
+                    if (result.deletedCount == 0) {
+                        return {
+                            statusCode: 400,
+                            status: false,
+                            message: 'Not such an Account',
+                            result
+                        }
+                    } else {
+                        return {
+                            statusCode: 200,
+                            status: true,
+                            message: 'Account deletion success',
+                        }
                     }
-                } else {
-                    return {
-                        statusCode: 200,
-                        status: true,
-                        message: 'Account deletion success',
-                    }
-                }
+                })
+                
 
             }
         })

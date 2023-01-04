@@ -20,6 +20,268 @@ export class ServiceService {
   }
 
 
+  //faculty login
+  facultylogincivil(Email: any, Password: any) {
+    const data = {
+      "Email": Email,
+      "Password": Password
+    }
+    return this.http.post('http://localhost:3002/facultylogincivil', data)
+  }
+
+  facultylogincs(Email: any, Password: any) {
+    const data = {
+      "Email": Email,
+      "Password": Password
+    }
+    return this.http.post('http://localhost:3002/facultylogincs', data)
+  }
+
+  facultyloginmech(Email: any, Password: any) {
+    const data = {
+      "Email": Email,
+      "Password": Password
+    }
+    return this.http.post('http://localhost:3002/facultyloginmech', data)
+  }
+
+  //student login
+  csfirstyearlogin(Email:any,Password:any){
+    const data={
+      "Email":Email,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/csfirstyearlogin', data)
+  }
+
+  cssecondyearlogin(Email:any,Password:any){
+    const data={
+      "Email":Email,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/cssecondyearlogin', data)
+  }
+
+  csthirdyearlogin(Email:any,Password:any){
+    const data={
+      "Email":Email,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/csthirdyearlogin', data)
+  }
+
+  csfourthyearlogin(Email:any,Password:any){
+    const data={
+      "Email":Email,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/csfourthyearlogin', data)
+  }
+
+
+  civilfirstyearlogin(Email:any,Password:any){
+    const data={
+      "Email":Email,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/civilfirstyearlogin', data)
+  }
+
+  civilsecondyearlogin(Email:any,Password:any){
+    const data={
+      "Email":Email,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/civilsecondyearlogin', data)
+  }
+
+  civilthirdyearlogin(Email:any,Password:any){
+    const data={
+      "Email":Email,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/civilthirdyearlogin', data)
+  }
+
+  civilfourthyearlogin(Email:any,Password:any){
+    const data={
+      "Email":Email,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/civilfourthyearlogin', data)
+  }
+
+
+  mechfirstyearlogin(Email:any,Password:any){
+    const data={
+      "Email":Email,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/mechfirstyearlogin', data)
+  }
+
+  mechsecondyearlogin(Email:any,Password:any){
+    const data={
+      "Email":Email,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/mechsecondyearlogin', data)
+  }
+
+  mechthirdyearlogin(Email:any,Password:any){
+    const data={
+      "Email":Email,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/mechthirdyearlogin', data)
+  }
+
+  mechfourthyearlogin(Email:any,Password:any){
+    const data={
+      "Email":Email,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/mechfourthyearlogin', data)
+  }
+
+
+  //student Registration
+  csfirstyearregistration(Email:any,Name:any,DOB:any,ContactNo:any,Password:any){
+    const data={
+      "Email":Email,
+      "Name":Name,
+      "DOB":DOB,
+      "ContactNo":ContactNo,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/csfirstyearregistration',data)
+  }
+
+  cssecondyearregistration(Email:any,Name:any,DOB:any,ContactNo:any,Password:any){
+    const data={
+      "Email":Email,
+      "Name":Name,
+      "DOB":DOB,
+      "ContactNo":ContactNo,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/cssecondyearregistration',data)
+  }
+
+  csthirdyearregistration(Email:any,Name:any,DOB:any,ContactNo:any,Password:any){
+    const data={
+      "Email":Email,
+      "Name":Name,
+      "DOB":DOB,
+      "ContactNo":ContactNo,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/csthirdyearregistration',data)
+  }
+
+  csfourthyearregistration(Email:any,Name:any,DOB:any,ContactNo:any,Password:any){
+    const data={
+      "Email":Email,
+      "Name":Name,
+      "DOB":DOB,
+      "ContactNo":ContactNo,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/csfourthyearregistration',data)
+  }
+
+
+  civilfirstyearregistration(Email:any,Name:any,DOB:any,ContactNo:any,Password:any){
+    const data={
+      "Email":Email,
+      "Name":Name,
+      "DOB":DOB,
+      "ContactNo":ContactNo,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/civilfirstyearregistration',data)
+  }
+
+  civilsecondyearregistration(Email:any,Name:any,DOB:any,ContactNo:any,Password:any){
+    const data={
+      "Email":Email,
+      "Name":Name,
+      "DOB":DOB,
+      "ContactNo":ContactNo,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/civilsecondyearregistration',data)
+  }
+
+  civilthirdyearregistration(Email:any,Name:any,DOB:any,ContactNo:any,Password:any){
+    const data={
+      "Email":Email,
+      "Name":Name,
+      "DOB":DOB,
+      "ContactNo":ContactNo,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/civilthirdyearregistration',data)
+  }
+
+  civilfourthyearregistration(Email:any,Name:any,DOB:any,ContactNo:any,Password:any){
+    const data={
+      "Email":Email,
+      "Name":Name,
+      "DOB":DOB,
+      "ContactNo":ContactNo,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/civilfourthyearregistration',data)
+  }
+
+
+  mechfirstyearregistration(Email:any,Name:any,DOB:any,ContactNo:any,Password:any){
+    const data={
+      "Email":Email,
+      "Name":Name,
+      "DOB":DOB,
+      "ContactNo":ContactNo,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/mechfirstyearregistration',data)
+  }
+
+  mechsecondyearregistration(Email:any,Name:any,DOB:any,ContactNo:any,Password:any){
+    const data={
+      "Email":Email,
+      "Name":Name,
+      "DOB":DOB,
+      "ContactNo":ContactNo,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/mechsecondyearregistration',data)
+  }
+
+  mechthirdyearregistration(Email:any,Name:any,DOB:any,ContactNo:any,Password:any){
+    const data={
+      "Email":Email,
+      "Name":Name,
+      "DOB":DOB,
+      "ContactNo":ContactNo,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/mechthirdyearregistration',data)
+  }
+
+  mechfourthyearregistration(Email:any,Name:any,DOB:any,ContactNo:any,Password:any){
+    const data={
+      "Email":Email,
+      "Name":Name,
+      "DOB":DOB,
+      "ContactNo":ContactNo,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/mechfourthyearregistration',data)
+  }
+
+
+
   //notification
   notificationUpdate(notification1: any, notification2: any, notification3: any) {
     const data = {
@@ -387,30 +649,7 @@ export class ServiceService {
     return this.http.post('http://localhost:3002/mechfourthyearindividual', ({ "id": id }))
   }
 
-  //faculty login
-  facultylogincivil(Email: any, Password: any) {
-    const data = {
-      "Email": Email,
-      "Password": Password
-    }
-    return this.http.post('http://localhost:3002/facultylogincivil', data)
-  }
-
-  facultylogincs(Email: any, Password: any) {
-    const data = {
-      "Email": Email,
-      "Password": Password
-    }
-    return this.http.post('http://localhost:3002/facultylogincs', data)
-  }
-
-  facultyloginmech(Email: any, Password: any) {
-    const data = {
-      "Email": Email,
-      "Password": Password
-    }
-    return this.http.post('http://localhost:3002/facultyloginmech', data)
-  }
+  
 
   //faculty changepassword
   civilfacultychangePassword(Email: any, Password: any, newPassword: any) {
@@ -441,451 +680,916 @@ export class ServiceService {
   }
 
 
-  civilfirstyearmark(Email: any, subAfirst: any, subAsecond: any, subAthird: any, subAfinal: any, subBfirst: any, subBsecond: any, subBthird: any, subBfinal: any, subCfirst: any, subCsecond: any, subCthird: any, subCfinal: any, subDfirst: any, subDsecond: any, subDthird: any, subDfinal: any, subEfirst: any, subEsecond: any, subEthird: any, subEfinal: any, subFfirst: any, subFsecond: any, subFthird: any, subFfinal: any) {
+  civilfirstyearsubA(Email: any, subAfirst: any, subAsecond: any, subAthird: any){
     const data = {
       "Email": Email,
-
       "subAfirst": subAfirst,
       "subAsecond": subAsecond,
-      "subAthird": subAthird,
-      "subAfinal": subAfinal,
-
-      "subBfirst": subBfirst,
-      "subBsecond": subBsecond,
-      "subBthird": subBthird,
-      "subBfinal": subBfinal,
-
-      "subCfirst": subCfirst,
-      "subCsecond": subCsecond,
-      "subCthird": subCthird,
-      "subCfinal": subCfinal,
-
-      "subDfirst": subDfirst,
-      "subDsecond": subDsecond,
-      "subDthird": subDthird,
-      "subDfinal": subDfinal,
-
-      "subEfirst": subEfirst,
-      "subEsecond": subEsecond,
-      "subEthird": subEthird,
-      "subEfinal": subEfinal,
-
-      "subffirst": subFfirst,
-      "subFsecond": subFsecond,
-      "subfthird": subFthird,
-      "subFfinal": subFfinal,
+      "subAthird": subAthird
     }
-    return this.http.post('http://localhost:3002/civilfirstyearmark', data)
+    return this.http.post('http://localhost:3002/civilfirstyearsubA', data)
   }
 
-  civilsecondyearmark(Email: any, subAfirst: any, subAsecond: any, subAthird: any, subAfinal: any, subBfirst: any, subBsecond: any, subBthird: any, subBfinal: any, subCfirst: any, subCsecond: any, subCthird: any, subCfinal: any, subDfirst: any, subDsecond: any, subDthird: any, subDfinal: any, subEfirst: any, subEsecond: any, subEthird: any, subEfinal: any, subFfirst: any, subFsecond: any, subFthird: any, subFfinal: any) {
+  civilfirstyearsubB(Email: any, subBfirst: any, subBsecond: any, subBthird: any){
     const data = {
       "Email": Email,
-
-      "subAfirst": subAfirst,
-      "subAsecond": subAsecond,
-      "subAthird": subAthird,
-      "subAfinal": subAfinal,
-
       "subBfirst": subBfirst,
       "subBsecond": subBsecond,
-      "subBthird": subBthird,
-      "subBfinal": subBfinal,
+      "subBthird": subBthird
+    }
+    return this.http.post('http://localhost:3002/civilfirstyearsubB', data)
+  }
 
+  civilfirstyearsubC(Email: any, subCfirst: any, subCsecond: any, subCthird: any){
+    const data = {
+      "Email": Email,
       "subCfirst": subCfirst,
       "subCsecond": subCsecond,
-      "subCthird": subCthird,
-      "subCfinal": subCfinal,
+      "subCthird": subCthird
+    }
+    return this.http.post('http://localhost:3002/civilfirstyearsubC', data)
+  }
 
+  civilfirstyearsubD(Email: any, subDfirst: any, subDsecond: any, subDthird: any){
+    const data = {
+      "Email": Email,
       "subDfirst": subDfirst,
       "subDsecond": subDsecond,
-      "subDthird": subDthird,
-      "subDfinal": subDfinal,
+      "subDthird": subDthird
+    }
+    return this.http.post('http://localhost:3002/civilfirstyearsubD', data)
+  }
 
+  civilfirstyearsubE(Email: any, subEfirst: any, subEsecond: any, subEthird: any){
+    const data = {
+      "Email": Email,
       "subEfirst": subEfirst,
       "subEsecond": subEsecond,
       "subEthird": subEthird,
-      "subEfinal": subEfinal,
+    }
+    return this.http.post('http://localhost:3002/civilfirstyearsubE', data)
+  }
 
+  civilfirstyearsubF(Email: any, subFfirst: any, subFsecond: any, subFthird: any){
+    const data = {
+      "Email": Email,
       "subFfirst": subFfirst,
       "subFsecond": subFsecond,
       "subFthird": subFthird,
-      "subFfinal": subFfinal,
     }
-    return this.http.post('http://localhost:3002/civilsecondyearmark', data)
+    return this.http.post('http://localhost:3002/civilfirstyearsubF', data)
   }
 
-  civilthirdyearmark(Email: any, subAfirst: any, subAsecond: any, subAthird: any, subAfinal: any, subBfirst: any, subBsecond: any, subBthird: any, subBfinal: any, subCfirst: any, subCsecond: any, subCthird: any, subCfinal: any, subDfirst: any, subDsecond: any, subDthird: any, subDfinal: any, subEfirst: any, subEsecond: any, subEthird: any, subEfinal: any, subFfirst: any, subFsecond: any, subFthird: any, subFfinal: any) {
+  civilsecondyearsubA(Email: any, subAfirst: any, subAsecond: any, subAthird: any){
     const data = {
       "Email": Email,
-
       "subAfirst": subAfirst,
       "subAsecond": subAsecond,
-      "subAthird": subAthird,
-      "subAfinal": subAfinal,
+      "subAthird": subAthird
+    }
+    return this.http.post('http://localhost:3002/civilsecondyearsubA', data)
+  }
 
+  civilsecondyearsubB(Email: any, subBfirst: any, subBsecond: any, subBthird: any){
+    const data = {
+      "Email": Email,
       "subBfirst": subBfirst,
       "subBsecond": subBsecond,
-      "subBthird": subBthird,
-      "subBfinal": subBfinal,
+      "subBthird": subBthird
+    }
+    return this.http.post('http://localhost:3002/civilsecondyearsubB', data)
+  }
 
+  civilsecondyearsubC(Email: any, subCfirst: any, subCsecond: any, subCthird: any){
+    const data = {
+      "Email": Email,
       "subCfirst": subCfirst,
       "subCsecond": subCsecond,
-      "subCthird": subCthird,
-      "subCfinal": subCfinal,
+      "subCthird": subCthird
+    }
+    return this.http.post('http://localhost:3002/civilsecondyearsubC', data)
+  }
 
+  civilsecondyearsubD(Email: any, subDfirst: any, subDsecond: any, subDthird: any){
+    const data = {
+      "Email": Email,
       "subDfirst": subDfirst,
       "subDsecond": subDsecond,
-      "subDthird": subDthird,
-      "subDfinal": subDfinal,
+      "subDthird": subDthird
+    }
+    return this.http.post('http://localhost:3002/civilsecondyearsubD', data)
+  }
 
+  civilsecondyearsubE(Email: any, subEfirst: any, subEsecond: any, subEthird: any){
+    const data = {
+      "Email": Email,
       "subEfirst": subEfirst,
       "subEsecond": subEsecond,
       "subEthird": subEthird,
-      "subEfinal": subEfinal,
-
-      "subffirst": subFfirst,
-      "subFsecond": subFsecond,
-      "subfthird": subFthird,
-      "subFfinal": subFfinal,
     }
-    return this.http.post('http://localhost:3002/civilthirdyearmark', data)
+    return this.http.post('http://localhost:3002/civilsecondyearsubE', data)
   }
 
-  civilfourthyearmark(Email: any, subAfirst: any, subAsecond: any, subAthird: any, subAfinal: any, subBfirst: any, subBsecond: any, subBthird: any, subBfinal: any, subCfirst: any, subCsecond: any, subCthird: any, subCfinal: any, subDfirst: any, subDsecond: any, subDthird: any, subDfinal: any, subEfirst: any, subEsecond: any, subEthird: any, subEfinal: any, subFfirst: any, subFsecond: any, subFthird: any, subFfinal: any) {
+  civilsecondyearsubF(Email: any, subFfirst: any, subFsecond: any, subFthird: any){
     const data = {
       "Email": Email,
+      "subFfirst": subFfirst,
+      "subFsecond": subFsecond,
+      "subFthird": subFthird,
+    }
+    return this.http.post('http://localhost:3002/civilsecondyearsubF', data)
+  }
 
+  civilthirdyearsubA(Email: any, subAfirst: any, subAsecond: any, subAthird: any){
+    const data = {
+      "Email": Email,
       "subAfirst": subAfirst,
       "subAsecond": subAsecond,
-      "subAthird": subAthird,
-      "subAfinal": subAfinal,
+      "subAthird": subAthird
+    }
+    return this.http.post('http://localhost:3002/civilthirdyearsubA', data)
+  }
 
+  civilthirdyearsubB(Email: any, subBfirst: any, subBsecond: any, subBthird: any){
+    const data = {
+      "Email": Email,
       "subBfirst": subBfirst,
       "subBsecond": subBsecond,
-      "subBthird": subBthird,
-      "subBfinal": subBfinal,
+      "subBthird": subBthird
+    }
+    return this.http.post('http://localhost:3002/civilthirdyearsubB', data)
+  }
 
+  civilthirdyearsubC(Email: any, subCfirst: any, subCsecond: any, subCthird: any){
+    const data = {
+      "Email": Email,
       "subCfirst": subCfirst,
       "subCsecond": subCsecond,
-      "subCthird": subCthird,
-      "subCfinal": subCfinal,
+      "subCthird": subCthird
+    }
+    return this.http.post('http://localhost:3002/civilthirdyearsubC', data)
+  }
 
+  civilthirdyearsubD(Email: any, subDfirst: any, subDsecond: any, subDthird: any){
+    const data = {
+      "Email": Email,
       "subDfirst": subDfirst,
       "subDsecond": subDsecond,
-      "subDthird": subDthird,
-      "subDfinal": subDfinal,
+      "subDthird": subDthird
+    }
+    return this.http.post('http://localhost:3002/civilthirdyearsubD', data)
+  }
 
+  civilthirdyearsubE(Email: any, subEfirst: any, subEsecond: any, subEthird: any){
+    const data = {
+      "Email": Email,
       "subEfirst": subEfirst,
       "subEsecond": subEsecond,
       "subEthird": subEthird,
-      "subEfinal": subEfinal,
-
-      "subffirst": subFfirst,
-      "subFsecond": subFsecond,
-      "subfthird": subFthird,
-      "subFfinal": subFfinal,
     }
-    return this.http.post('http://localhost:3002/civilfourthyearmark', data)
+    return this.http.post('http://localhost:3002/civilthirdyearsubE', data)
   }
 
-
-  csfirstyearmark(Email: any, subAfirst: any, subAsecond: any, subAthird: any, subAfinal: any, subBfirst: any, subBsecond: any, subBthird: any, subBfinal: any, subCfirst: any, subCsecond: any, subCthird: any, subCfinal: any, subDfirst: any, subDsecond: any, subDthird: any, subDfinal: any, subEfirst: any, subEsecond: any, subEthird: any, subEfinal: any, subFfirst: any, subFsecond: any, subFthird: any, subFfinal: any) {
+  civilthirdyearsubF(Email: any, subFfirst: any, subFsecond: any, subFthird: any){
     const data = {
       "Email": Email,
+      "subFfirst": subFfirst,
+      "subFsecond": subFsecond,
+      "subFthird": subFthird,
+    }
+    return this.http.post('http://localhost:3002/civilthirdyearsubF', data)
+  }
 
+  civilfourthyearsubA(Email: any, subAfirst: any, subAsecond: any, subAthird: any){
+    const data = {
+      "Email": Email,
       "subAfirst": subAfirst,
       "subAsecond": subAsecond,
-      "subAthird": subAthird,
-      "subAfinal": subAfinal,
+      "subAthird": subAthird
+    }
+    return this.http.post('http://localhost:3002/civilfourthyearsubA', data)
+  }
 
+  civilfourthyearsubB(Email: any, subBfirst: any, subBsecond: any, subBthird: any){
+    const data = {
+      "Email": Email,
       "subBfirst": subBfirst,
       "subBsecond": subBsecond,
-      "subBthird": subBthird,
-      "subBfinal": subBfinal,
+      "subBthird": subBthird
+    }
+    return this.http.post('http://localhost:3002/civilfourthyearsubB', data)
+  }
 
+  civilfourthyearsubC(Email: any, subCfirst: any, subCsecond: any, subCthird: any){
+    const data = {
+      "Email": Email,
       "subCfirst": subCfirst,
       "subCsecond": subCsecond,
-      "subCthird": subCthird,
-      "subCfinal": subCfinal,
+      "subCthird": subCthird
+    }
+    return this.http.post('http://localhost:3002/civilfourthyearsubC', data)
+  }
 
+  civilfourthyearsubD(Email: any, subDfirst: any, subDsecond: any, subDthird: any){
+    const data = {
+      "Email": Email,
       "subDfirst": subDfirst,
       "subDsecond": subDsecond,
-      "subDthird": subDthird,
-      "subDfinal": subDfinal,
+      "subDthird": subDthird
+    }
+    return this.http.post('http://localhost:3002/civilfourthyearsubD', data)
+  }
 
+  civilfourthyearsubE(Email: any, subEfirst: any, subEsecond: any, subEthird: any){
+    const data = {
+      "Email": Email,
       "subEfirst": subEfirst,
       "subEsecond": subEsecond,
       "subEthird": subEthird,
-      "subEfinal": subEfinal,
-
-      "subffirst": subFfirst,
-      "subFsecond": subFsecond,
-      "subfthird": subFthird,
-      "subFfinal": subFfinal,
     }
-    return this.http.post('http://localhost:3002/csfirstyearmark', data)
+    return this.http.post('http://localhost:3002/civilfourthyearsubE', data)
   }
 
-  cssecondyearmark(Email: any, subAfirst: any, subAsecond: any, subAthird: any, subAfinal: any, subBfirst: any, subBsecond: any, subBthird: any, subBfinal: any, subCfirst: any, subCsecond: any, subCthird: any, subCfinal: any, subDfirst: any, subDsecond: any, subDthird: any, subDfinal: any, subEfirst: any, subEsecond: any, subEthird: any, subEfinal: any, subFfirst: any, subFsecond: any, subFthird: any, subFfinal: any) {
+  civilfourthyearsubF(Email: any, subFfirst: any, subFsecond: any, subFthird: any){
     const data = {
       "Email": Email,
+      "subFfirst": subFfirst,
+      "subFsecond": subFsecond,
+      "subFthird": subFthird,
+    }
+    return this.http.post('http://localhost:3002/civilfourthyearsubF', data)
+  }
 
+
+  csfirstyearsubA(Email: any, subAfirst: any, subAsecond: any, subAthird: any){
+    const data = {
+      "Email": Email,
       "subAfirst": subAfirst,
       "subAsecond": subAsecond,
-      "subAthird": subAthird,
-      "subAfinal": subAfinal,
+      "subAthird": subAthird
+    }
+    return this.http.post('http://localhost:3002/csfirstyearsubA', data)
+  }
 
+  csfirstyearsubB(Email: any, subBfirst: any, subBsecond: any, subBthird: any){
+    const data = {
+      "Email": Email,
       "subBfirst": subBfirst,
       "subBsecond": subBsecond,
-      "subBthird": subBthird,
-      "subBfinal": subBfinal,
+      "subBthird": subBthird
+    }
+    return this.http.post('http://localhost:3002/csfirstyearsubB', data)
+  }
 
+  csfirstyearsubC(Email: any, subCfirst: any, subCsecond: any, subCthird: any){
+    const data = {
+      "Email": Email,
       "subCfirst": subCfirst,
       "subCsecond": subCsecond,
-      "subCthird": subCthird,
-      "subCfinal": subCfinal,
+      "subCthird": subCthird
+    }
+    return this.http.post('http://localhost:3002/csfirstyearsubC', data)
+  }
 
+  csfirstyearsubD(Email: any, subDfirst: any, subDsecond: any, subDthird: any){
+    const data = {
+      "Email": Email,
       "subDfirst": subDfirst,
       "subDsecond": subDsecond,
-      "subDthird": subDthird,
-      "subDfinal": subDfinal,
+      "subDthird": subDthird
+    }
+    return this.http.post('http://localhost:3002/csfirstyearsubD', data)
+  }
 
+  csfirstyearsubE(Email: any, subEfirst: any, subEsecond: any, subEthird: any){
+    const data = {
+      "Email": Email,
       "subEfirst": subEfirst,
       "subEsecond": subEsecond,
       "subEthird": subEthird,
-      "subEfinal": subEfinal,
-
-      "subffirst": subFfirst,
-      "subFsecond": subFsecond,
-      "subfthird": subFthird,
-      "subFfinal": subFfinal,
     }
-    return this.http.post('http://localhost:3002/cssecondyearmark', data)
+    return this.http.post('http://localhost:3002/csfirstyearsubE', data)
   }
 
-  csthirdyearmark(Email: any, subAfirst: any, subAsecond: any, subAthird: any, subAfinal: any, subBfirst: any, subBsecond: any, subBthird: any, subBfinal: any, subCfirst: any, subCsecond: any, subCthird: any, subCfinal: any, subDfirst: any, subDsecond: any, subDthird: any, subDfinal: any, subEfirst: any, subEsecond: any, subEthird: any, subEfinal: any, subFfirst: any, subFsecond: any, subFthird: any, subFfinal: any) {
+  csfirstyearsubF(Email: any, subFfirst: any, subFsecond: any, subFthird: any){
     const data = {
       "Email": Email,
+      "subFfirst": subFfirst,
+      "subFsecond": subFsecond,
+      "subFthird": subFthird,
+    }
+    return this.http.post('http://localhost:3002/csfirstyearsubF', data)
+  }
 
+  cssecondyearsubA(Email: any, subAfirst: any, subAsecond: any, subAthird: any){
+    const data = {
+      "Email": Email,
       "subAfirst": subAfirst,
       "subAsecond": subAsecond,
-      "subAthird": subAthird,
-      "subAfinal": subAfinal,
+      "subAthird": subAthird
+    }
+    return this.http.post('http://localhost:3002/cssecondyearsubA', data)
+  }
 
+  cssecondyearsubB(Email: any, subBfirst: any, subBsecond: any, subBthird: any){
+    const data = {
+      "Email": Email,
       "subBfirst": subBfirst,
       "subBsecond": subBsecond,
-      "subBthird": subBthird,
-      "subBfinal": subBfinal,
+      "subBthird": subBthird
+    }
+    return this.http.post('http://localhost:3002/cssecondyearsubB', data)
+  }
 
+  cssecondyearsubC(Email: any, subCfirst: any, subCsecond: any, subCthird: any){
+    const data = {
+      "Email": Email,
       "subCfirst": subCfirst,
       "subCsecond": subCsecond,
-      "subCthird": subCthird,
-      "subCfinal": subCfinal,
+      "subCthird": subCthird
+    }
+    return this.http.post('http://localhost:3002/cssecondyearsubC', data)
+  }
 
+  cssecondyearsubD(Email: any, subDfirst: any, subDsecond: any, subDthird: any){
+    const data = {
+      "Email": Email,
       "subDfirst": subDfirst,
       "subDsecond": subDsecond,
-      "subDthird": subDthird,
-      "subDfinal": subDfinal,
+      "subDthird": subDthird
+    }
+    return this.http.post('http://localhost:3002/cssecondyearsubD', data)
+  }
 
+  cssecondyearsubE(Email: any, subEfirst: any, subEsecond: any, subEthird: any){
+    const data = {
+      "Email": Email,
       "subEfirst": subEfirst,
       "subEsecond": subEsecond,
       "subEthird": subEthird,
-      "subEfinal": subEfinal,
-
-      "subffirst": subFfirst,
-      "subFsecond": subFsecond,
-      "subfthird": subFthird,
-      "subFfinal": subFfinal,
     }
-    return this.http.post('http://localhost:3002/csthirdyearmark', data)
+    return this.http.post('http://localhost:3002/cssecondyearsubE', data)
   }
 
-  csfourthyearmark(Email: any, subAfirst: any, subAsecond: any, subAthird: any, subAfinal: any, subBfirst: any, subBsecond: any, subBthird: any, subBfinal: any, subCfirst: any, subCsecond: any, subCthird: any, subCfinal: any, subDfirst: any, subDsecond: any, subDthird: any, subDfinal: any, subEfirst: any, subEsecond: any, subEthird: any, subEfinal: any, subFfirst: any, subFsecond: any, subFthird: any, subFfinal: any) {
+  cssecondyearsubF(Email: any, subFfirst: any, subFsecond: any, subFthird: any){
     const data = {
       "Email": Email,
+      "subFfirst": subFfirst,
+      "subFsecond": subFsecond,
+      "subFthird": subFthird,
+    }
+    return this.http.post('http://localhost:3002/cssecondyearsubF', data)
+  }
 
+  csthirdyearsubA(Email: any, subAfirst: any, subAsecond: any, subAthird: any){
+    const data = {
+      "Email": Email,
       "subAfirst": subAfirst,
       "subAsecond": subAsecond,
-      "subAthird": subAthird,
-      "subAfinal": subAfinal,
+      "subAthird": subAthird
+    }
+    return this.http.post('http://localhost:3002/csthirdyearsubA', data)
+  }
 
+  csthirdyearsubB(Email: any, subBfirst: any, subBsecond: any, subBthird: any){
+    const data = {
+      "Email": Email,
       "subBfirst": subBfirst,
       "subBsecond": subBsecond,
-      "subBthird": subBthird,
-      "subBfinal": subBfinal,
+      "subBthird": subBthird
+    }
+    return this.http.post('http://localhost:3002/csthirdyearsubB', data)
+  }
 
+  csthirdyearsubC(Email: any, subCfirst: any, subCsecond: any, subCthird: any){
+    const data = {
+      "Email": Email,
       "subCfirst": subCfirst,
       "subCsecond": subCsecond,
-      "subCthird": subCthird,
-      "subCfinal": subCfinal,
+      "subCthird": subCthird
+    }
+    return this.http.post('http://localhost:3002/csthirdyearsubC', data)
+  }
 
+  csthirdyearsubD(Email: any, subDfirst: any, subDsecond: any, subDthird: any){
+    const data = {
+      "Email": Email,
       "subDfirst": subDfirst,
       "subDsecond": subDsecond,
-      "subDthird": subDthird,
-      "subDfinal": subDfinal,
+      "subDthird": subDthird
+    }
+    return this.http.post('http://localhost:3002/csthirdyearsubD', data)
+  }
 
+  csthirdyearsubE(Email: any, subEfirst: any, subEsecond: any, subEthird: any){
+    const data = {
+      "Email": Email,
       "subEfirst": subEfirst,
       "subEsecond": subEsecond,
       "subEthird": subEthird,
-      "subEfinal": subEfinal,
-
-      "subffirst": subFfirst,
-      "subFsecond": subFsecond,
-      "subfthird": subFthird,
-      "subFfinal": subFfinal,
     }
-    return this.http.post('http://localhost:3002/csfourthyearmark', data)
+    return this.http.post('http://localhost:3002/csthirdyearsubE', data)
   }
 
-  mechfirstyearmark(Email: any, subAfirst: any, subAsecond: any, subAthird: any, subAfinal: any, subBfirst: any, subBsecond: any, subBthird: any, subBfinal: any, subCfirst: any, subCsecond: any, subCthird: any, subCfinal: any, subDfirst: any, subDsecond: any, subDthird: any, subDfinal: any, subEfirst: any, subEsecond: any, subEthird: any, subEfinal: any, subFfirst: any, subFsecond: any, subFthird: any, subFfinal: any) {
+  csthirdyearsubF(Email: any, subFfirst: any, subFsecond: any, subFthird: any){
     const data = {
       "Email": Email,
+      "subFfirst": subFfirst,
+      "subFsecond": subFsecond,
+      "subFthird": subFthird,
+    }
+    return this.http.post('http://localhost:3002/csthirdyearsubF', data)
+  }
 
+  csfourthyearsubA(Email: any, subAfirst: any, subAsecond: any, subAthird: any){
+    const data = {
+      "Email": Email,
       "subAfirst": subAfirst,
       "subAsecond": subAsecond,
-      "subAthird": subAthird,
-      "subAfinal": subAfinal,
+      "subAthird": subAthird
+    }
+    return this.http.post('http://localhost:3002/csfourthyearsubA', data)
+  }
 
+  csfourthyearsubB(Email: any, subBfirst: any, subBsecond: any, subBthird: any){
+    const data = {
+      "Email": Email,
       "subBfirst": subBfirst,
       "subBsecond": subBsecond,
-      "subBthird": subBthird,
-      "subBfinal": subBfinal,
+      "subBthird": subBthird
+    }
+    return this.http.post('http://localhost:3002/csfourthyearsubB', data)
+  }
 
+  csfourthyearsubC(Email: any, subCfirst: any, subCsecond: any, subCthird: any){
+    const data = {
+      "Email": Email,
       "subCfirst": subCfirst,
       "subCsecond": subCsecond,
-      "subCthird": subCthird,
-      "subCfinal": subCfinal,
+      "subCthird": subCthird
+    }
+    return this.http.post('http://localhost:3002/csfourthyearsubC', data)
+  }
 
+  csfourthyearsubD(Email: any, subDfirst: any, subDsecond: any, subDthird: any){
+    const data = {
+      "Email": Email,
       "subDfirst": subDfirst,
       "subDsecond": subDsecond,
-      "subDthird": subDthird,
-      "subDfinal": subDfinal,
+      "subDthird": subDthird
+    }
+    return this.http.post('http://localhost:3002/csfourthyearsubD', data)
+  }
 
+  csfourthyearsubE(Email: any, subEfirst: any, subEsecond: any, subEthird: any){
+    const data = {
+      "Email": Email,
       "subEfirst": subEfirst,
       "subEsecond": subEsecond,
       "subEthird": subEthird,
-      "subEfinal": subEfinal,
-
-      "subffirst": subFfirst,
-      "subFsecond": subFsecond,
-      "subfthird": subFthird,
-      "subFfinal": subFfinal,
     }
-    return this.http.post('http://localhost:3002/mechfirstyearmark', data)
+    return this.http.post('http://localhost:3002/csfourthyearsubE', data)
+  }
+
+  csfourthyearsubF(Email: any, subFfirst: any, subFsecond: any, subFthird: any){
+    const data = {
+      "Email": Email,
+      "subFfirst": subFfirst,
+      "subFsecond": subFsecond,
+      "subFthird": subFthird,
+    }
+    return this.http.post('http://localhost:3002/csfourthyearsubF', data)
   }
 
 
-  mechsecondyearmark(Email: any, subAfirst: any, subAsecond: any, subAthird: any, subAfinal: any, subBfirst: any, subBsecond: any, subBthird: any, subBfinal: any, subCfirst: any, subCsecond: any, subCthird: any, subCfinal: any, subDfirst: any, subDsecond: any, subDthird: any, subDfinal: any, subEfirst: any, subEsecond: any, subEthird: any, subEfinal: any, subFfirst: any, subFsecond: any, subFthird: any, subFfinal: any) {
+  mechfirstyearsubA(Email: any, subAfirst: any, subAsecond: any, subAthird: any){
     const data = {
       "Email": Email,
-
       "subAfirst": subAfirst,
       "subAsecond": subAsecond,
-      "subAthird": subAthird,
-      "subAfinal": subAfinal,
+      "subAthird": subAthird
+    }
+    return this.http.post('http://localhost:3002/mechfirstyearsubA', data)
+  }
 
+  mechfirstyearsubB(Email: any, subBfirst: any, subBsecond: any, subBthird: any){
+    const data = {
+      "Email": Email,
       "subBfirst": subBfirst,
       "subBsecond": subBsecond,
-      "subBthird": subBthird,
-      "subBfinal": subBfinal,
+      "subBthird": subBthird
+    }
+    return this.http.post('http://localhost:3002/mechfirstyearsubB', data)
+  }
 
+  mechfirstyearsubC(Email: any, subCfirst: any, subCsecond: any, subCthird: any){
+    const data = {
+      "Email": Email,
       "subCfirst": subCfirst,
       "subCsecond": subCsecond,
-      "subCthird": subCthird,
-      "subCfinal": subCfinal,
+      "subCthird": subCthird
+    }
+    return this.http.post('http://localhost:3002/mechfirstyearsubC', data)
+  }
 
+  mechfirstyearsubD(Email: any, subDfirst: any, subDsecond: any, subDthird: any){
+    const data = {
+      "Email": Email,
       "subDfirst": subDfirst,
       "subDsecond": subDsecond,
-      "subDthird": subDthird,
-      "subDfinal": subDfinal,
+      "subDthird": subDthird
+    }
+    return this.http.post('http://localhost:3002/mechfirstyearsubD', data)
+  }
 
+  mechfirstyearsubE(Email: any, subEfirst: any, subEsecond: any, subEthird: any){
+    const data = {
+      "Email": Email,
       "subEfirst": subEfirst,
       "subEsecond": subEsecond,
       "subEthird": subEthird,
-      "subEfinal": subEfinal,
-
-      "subffirst": subFfirst,
-      "subFsecond": subFsecond,
-      "subfthird": subFthird,
-      "subFfinal": subFfinal,
     }
-    return this.http.post('http://localhost:3002/mechsecondyearmark', data)
+    return this.http.post('http://localhost:3002/mechfirstyearsubE', data)
   }
 
-  mechthirdyearmark(Email: any, subAfirst: any, subAsecond: any, subAthird: any, subAfinal: any, subBfirst: any, subBsecond: any, subBthird: any, subBfinal: any, subCfirst: any, subCsecond: any, subCthird: any, subCfinal: any, subDfirst: any, subDsecond: any, subDthird: any, subDfinal: any, subEfirst: any, subEsecond: any, subEthird: any, subEfinal: any, subFfirst: any, subFsecond: any, subFthird: any, subFfinal: any) {
+  mechfirstyearsubF(Email: any, subFfirst: any, subFsecond: any, subFthird: any){
     const data = {
       "Email": Email,
+      "subFfirst": subFfirst,
+      "subFsecond": subFsecond,
+      "subFthird": subFthird,
+    }
+    return this.http.post('http://localhost:3002/mechfirstyearsubF', data)
+  }
 
+  mechsecondyearsubA(Email: any, subAfirst: any, subAsecond: any, subAthird: any){
+    const data = {
+      "Email": Email,
       "subAfirst": subAfirst,
       "subAsecond": subAsecond,
-      "subAthird": subAthird,
-      "subAfinal": subAfinal,
+      "subAthird": subAthird
+    }
+    return this.http.post('http://localhost:3002/mechsecondyearsubA', data)
+  }
 
+  mechsecondyearsubB(Email: any, subBfirst: any, subBsecond: any, subBthird: any){
+    const data = {
+      "Email": Email,
       "subBfirst": subBfirst,
       "subBsecond": subBsecond,
-      "subBthird": subBthird,
-      "subBfinal": subBfinal,
+      "subBthird": subBthird
+    }
+    return this.http.post('http://localhost:3002/mechsecondyearsubB', data)
+  }
 
+  mechsecondyearsubC(Email: any, subCfirst: any, subCsecond: any, subCthird: any){
+    const data = {
+      "Email": Email,
       "subCfirst": subCfirst,
       "subCsecond": subCsecond,
-      "subCthird": subCthird,
-      "subCfinal": subCfinal,
+      "subCthird": subCthird
+    }
+    return this.http.post('http://localhost:3002/mechsecondyearsubC', data)
+  }
 
+  mechsecondyearsubD(Email: any, subDfirst: any, subDsecond: any, subDthird: any){
+    const data = {
+      "Email": Email,
       "subDfirst": subDfirst,
       "subDsecond": subDsecond,
-      "subDthird": subDthird,
-      "subDfinal": subDfinal,
+      "subDthird": subDthird
+    }
+    return this.http.post('http://localhost:3002/mechsecondyearsubD', data)
+  }
 
+  mechsecondyearsubE(Email: any, subEfirst: any, subEsecond: any, subEthird: any){
+    const data = {
+      "Email": Email,
       "subEfirst": subEfirst,
       "subEsecond": subEsecond,
       "subEthird": subEthird,
-      "subEfinal": subEfinal,
-
-      "subffirst": subFfirst,
-      "subFsecond": subFsecond,
-      "subfthird": subFthird,
-      "subFfinal": subFfinal,
     }
-    return this.http.post('http://localhost:3002/mechthirdyearmark', data)
+    return this.http.post('http://localhost:3002/mechsecondyearsubE', data)
   }
 
-  mechfourthyearmark(Email: any, subAfirst: any, subAsecond: any, subAthird: any, subAfinal: any, subBfirst: any, subBsecond: any, subBthird: any, subBfinal: any, subCfirst: any, subCsecond: any, subCthird: any, subCfinal: any, subDfirst: any, subDsecond: any, subDthird: any, subDfinal: any, subEfirst: any, subEsecond: any, subEthird: any, subEfinal: any, subFfirst: any, subFsecond: any, subFthird: any, subFfinal: any) {
+  mechsecondyearsubF(Email: any, subFfirst: any, subFsecond: any, subFthird: any){
     const data = {
       "Email": Email,
+      "subFfirst": subFfirst,
+      "subFsecond": subFsecond,
+      "subFthird": subFthird,
+    }
+    return this.http.post('http://localhost:3002/mechsecondyearsubF', data)
+  }
 
+  mechthirdyearsubA(Email: any, subAfirst: any, subAsecond: any, subAthird: any){
+    const data = {
+      "Email": Email,
       "subAfirst": subAfirst,
       "subAsecond": subAsecond,
-      "subAthird": subAthird,
-      "subAfinal": subAfinal,
+      "subAthird": subAthird
+    }
+    return this.http.post('http://localhost:3002/mechthirdyearsubA', data)
+  }
 
+  mechthirdyearsubB(Email: any, subBfirst: any, subBsecond: any, subBthird: any){
+    const data = {
+      "Email": Email,
       "subBfirst": subBfirst,
       "subBsecond": subBsecond,
-      "subBthird": subBthird,
-      "subBfinal": subBfinal,
+      "subBthird": subBthird
+    }
+    return this.http.post('http://localhost:3002/mechthirdyearsubB', data)
+  }
 
+  mechthirdyearsubC(Email: any, subCfirst: any, subCsecond: any, subCthird: any){
+    const data = {
+      "Email": Email,
       "subCfirst": subCfirst,
       "subCsecond": subCsecond,
-      "subCthird": subCthird,
-      "subCfinal": subCfinal,
+      "subCthird": subCthird
+    }
+    return this.http.post('http://localhost:3002/mechthirdyearsubC', data)
+  }
 
+  mechthirdyearsubD(Email: any, subDfirst: any, subDsecond: any, subDthird: any){
+    const data = {
+      "Email": Email,
       "subDfirst": subDfirst,
       "subDsecond": subDsecond,
-      "subDthird": subDthird,
-      "subDfinal": subDfinal,
+      "subDthird": subDthird
+    }
+    return this.http.post('http://localhost:3002/mechthirdyearsubD', data)
+  }
 
+  mechthirdyearsubE(Email: any, subEfirst: any, subEsecond: any, subEthird: any){
+    const data = {
+      "Email": Email,
       "subEfirst": subEfirst,
       "subEsecond": subEsecond,
       "subEthird": subEthird,
-      "subEfinal": subEfinal,
-
-      "subffirst": subFfirst,
-      "subFsecond": subFsecond,
-      "subfthird": subFthird,
-      "subFfinal": subFfinal,
     }
-    return this.http.post('http://localhost:3002/mechfourthyearmark', data)
+    return this.http.post('http://localhost:3002/mechthirdyearsubE', data)
+  }
+
+  mechthirdyearsubF(Email: any, subFfirst: any, subFsecond: any, subFthird: any){
+    const data = {
+      "Email": Email,
+      "subFfirst": subFfirst,
+      "subFsecond": subFsecond,
+      "subFthird": subFthird,
+    }
+    return this.http.post('http://localhost:3002/mechthirdyearsubF', data)
+  }
+
+  mechfourthyearsubA(Email: any, subAfirst: any, subAsecond: any, subAthird: any){
+    const data = {
+      "Email": Email,
+      "subAfirst": subAfirst,
+      "subAsecond": subAsecond,
+      "subAthird": subAthird
+    }
+    return this.http.post('http://localhost:3002/mechfourthyearsubA', data)
+  }
+
+  mechfourthyearsubB(Email: any, subBfirst: any, subBsecond: any, subBthird: any){
+    const data = {
+      "Email": Email,
+      "subBfirst": subBfirst,
+      "subBsecond": subBsecond,
+      "subBthird": subBthird
+    }
+    return this.http.post('http://localhost:3002/mechfourthyearsubB', data)
+  }
+
+  mechfourthyearsubC(Email: any, subCfirst: any, subCsecond: any, subCthird: any){
+    const data = {
+      "Email": Email,
+      "subCfirst": subCfirst,
+      "subCsecond": subCsecond,
+      "subCthird": subCthird
+    }
+    return this.http.post('http://localhost:3002/mechfourthyearsubC', data)
+  }
+
+  mechfourthyearsubD(Email: any, subDfirst: any, subDsecond: any, subDthird: any){
+    const data = {
+      "Email": Email,
+      "subDfirst": subDfirst,
+      "subDsecond": subDsecond,
+      "subDthird": subDthird
+    }
+    return this.http.post('http://localhost:3002/mechfourthyearsubD', data)
+  }
+
+  mechfourthyearsubE(Email: any, subEfirst: any, subEsecond: any, subEthird: any){
+    const data = {
+      "Email": Email,
+      "subEfirst": subEfirst,
+      "subEsecond": subEsecond,
+      "subEthird": subEthird,
+    }
+    return this.http.post('http://localhost:3002/mechfourthyearsubE', data)
+  }
+
+  mechfourthyearsubF(Email: any, subFfirst: any, subFsecond: any, subFthird: any){
+    const data = {
+      "Email": Email,
+      "subFfirst": subFfirst,
+      "subFsecond": subFsecond,
+      "subFthird": subFthird,
+    }
+    return this.http.post('http://localhost:3002/mechfourthyearsubF', data)
+  }
+
+  ktunotification(){
+    return this.http.get('https://ktunotification.herokuapp.com/')
+  }
+
+  csfirstyear(Email: any){
+    return this.http.post('http://localhost:3002/csfirstyear',{"Email":Email})
+  }
+
+  cssecondyear(Email: any){
+    return this.http.post('http://localhost:3002/cssecondyear',{"Email":Email})
+  }
+
+  csthirdyear(Email: any){
+    return this.http.post('http://localhost:3002/csthirdyear',{"Email":Email})
+  }
+
+  csfourthyear(Email: any){
+    return this.http.post('http://localhost:3002/csfourthyear',{"Email":Email})
+  }
+
+  civilfirstyear(Email: any){
+    return this.http.post('http://localhost:3002/civilfirstyear',{"Email":Email})
+  }
+
+  civilsecondyear(Email: any){
+    return this.http.post('http://localhost:3002/civilsecondyear',{"Email":Email})
+  }
+
+  civilthirdyear(Email: any){
+    return this.http.post('http://localhost:3002/civilthirdyear',{"Email":Email})
+  }
+
+  civilfourthyear(Email: any){
+    return this.http.post('http://localhost:3002/civilfourthyear',{"Email":Email})
+  }
+
+  mechfirstyear(Email: any){
+    return this.http.post('http://localhost:3002/mechfirstyear',{"Email":Email})
+  }
+
+  mechsecondyear(Email: any){
+    return this.http.post('http://localhost:3002/mechsecondyear',{"Email":Email})
+  }
+
+  mechthirdyear(Email: any){
+    return this.http.post('http://localhost:3002/mechthirdyear',{"Email":Email})
+  }
+
+  mechfourthyear(Email: any){
+    return this.http.post('http://localhost:3002/mechfourthyear',{"Email":Email})
+  }
+
+  csfirstyearchangepassword(Email:any,Password:any){
+    const data={
+      "Email":Email,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/csfirstyearchangepassword',data)
+  }
+  cssecondyearchangepassword(Email:any,Password:any){
+    const data={
+      "Email":Email,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/cssecondyearchangepassword',data)
+  }
+  csthirdyearchangepassword(Email:any,Password:any){
+    const data={
+      "Email":Email,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/csthirdyearchangepassword',data)
+  }
+  csfourthyearchangepassword(Email:any,Password:any){
+    const data={
+      "Email":Email,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/csfourthyearchangepassword',data)
+  }
+
+  civilfirstyearchangepassword(Email:any,Password:any){
+    const data={
+      "Email":Email,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/civilfirstyearchangepassword',data)
+  }
+  civilsecondyearchangepassword(Email:any,Password:any){
+    const data={
+      "Email":Email,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/civilsecondyearchangepassword',data)
+  }
+  civilthirdyearchangepassword(Email:any,Password:any){
+    const data={
+      "Email":Email,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/civilthirdyearchangepassword',data)
+  }
+  civilfourthyearchangepassword(Email:any,Password:any){
+    const data={
+      "Email":Email,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/civilfourthyearchangepassword',data)
+  }
+
+  mechfirstyearchangepassword(Email:any,Password:any){
+    const data={
+      "Email":Email,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/mechfirstyearchangepassword',data)
+  }
+  mechsecondyearchangepassword(Email:any,Password:any){
+    const data={
+      "Email":Email,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/mechsecondyearchangepassword',data)
+  }
+  mechthirdyearchangepassword(Email:any,Password:any){
+    const data={
+      "Email":Email,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/mechthirdyearchangepassword',data)
+  }
+  mechfourthyearchangepassword(Email:any,Password:any){
+    const data={
+      "Email":Email,
+      "Password":Password
+    }
+    return this.http.post('http://localhost:3002/mechfourthyearchangepassword',data)
   }
 
 
+  csfirstmarkdisplay(Email:any){
+    return this.http.post('http://localhost:3002/csfirstmarkdisplay',{"Email":Email})
+  }
+
+  cssecondmarkdisplay(Email:any){
+    return this.http.post('http://localhost:3002/cssecondmarkdisplay',{"Email":Email})
+  }
+
+  csthirdmarkdisplay(Email:any){
+    return this.http.post('http://localhost:3002/csthirdmarkdisplay',{"Email":Email})
+  }
+
+  csfourthmarkdisplay(Email:any){
+    return this.http.post('http://localhost:3002/csfourthmarkdisplay',{"Email":Email})
+  }
+
+  civilfirstmarkdisplay(Email:any){
+    return this.http.post('http://localhost:3002/civilfirstmarkdisplay',{"Email":Email})
+  }
+
+  civilsecondmarkdisplay(Email:any){
+    return this.http.post('http://localhost:3002/civilsecondmarkdisplay',{"Email":Email})
+  }
+
+  civilthirdmarkdisplay(Email:any){
+    return this.http.post('http://localhost:3002/civilthirdmarkdisplay',{"Email":Email})
+  }
+
+  civilfourthmarkdisplay(Email:any){
+    return this.http.post('http://localhost:3002/civilfourthmarkdisplay',{"Email":Email})
+  }
+
+  mechfirstmarkdisplay(Email:any){
+    return this.http.post('http://localhost:3002/mechfirstmarkdisplay',{"Email":Email})
+  }
+
+  mechsecondmarkdisplay(Email:any){
+    return this.http.post('http://localhost:3002/mechsecondmarkdisplay',{"Email":Email})
+  }
+
+  mechthirdmarkdisplay(Email:any){
+    return this.http.post('http://localhost:3002/mechthirdmarkdisplay',{"Email":Email})
+  }
+
+  mechfourthmarkdisplay(Email:any){
+    return this.http.post('http://localhost:3002/mechfourthmarkdisplay',{"Email":Email})
+  }
+
+
+  
 }

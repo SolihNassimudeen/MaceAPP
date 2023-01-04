@@ -61,17 +61,13 @@
                 <input class="form-control" formControlName="Email" name="Email" type="text">
             </div>
             <label><strong>Select Department</strong></label>
-            <div class="form-control mb-2" style="text-align: center;height: 2rem; padding-bottom: 1rem;">
-                <a class="adddelete_hover nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" (click)="departmentCS()">Computer Science</a></li>
-                    <li><a class="dropdown-item" (click)="departmentCivil()">Civil Engineering</a></li>
-                    <li><a class="dropdown-item" (click)="departmentMech()">Mechanical Engineering</a></li>
-                </ul>
-            </div>
-            <div>
+            <select class="form-control text-center" (change)="department($event)" >
+                <option disabled selected>Department</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Civil Engineering">Civil Engineering</option>
+                <option value="Mechanical Engineering">Mechanical Engineering</option>
+            </select>
+            <div class="mt-2">
                 <div>
                     <label for="subject"><strong>Teaching Subject code In UpperCase</strong></label>
                 </div>
@@ -106,17 +102,13 @@
                 <input class="form-control" formControlName="Email" name="Email" type="text">
             </div>
             <label><strong>Select Department</strong></label>
-            <div class="form-control mb-2" style="text-align: center;height: 2rem; padding-bottom: 1rem;">
-                <a class="adddelete_hover nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" (click)="departmentCS()">Computer Science</a></li>
-                    <li><a class="dropdown-item" (click)="departmentCivil()">Civil Engineering</a></li>
-                    <li><a class="dropdown-item" (click)="departmentMech()">Mechanical Engineering</a></li>
-                </ul>
-            </div>
-            <div>
+            <select class="form-control text-center" (change)="department($event)" >
+                <option disabled selected>Department</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Civil Engineering">Civil Engineering</option>
+                <option value="Mechanical Engineering">Mechanical Engineering</option>
+            </select>
+            <div class="mt-2">
                 <button type="submit" class="btn btn-outline-success w-25 m-3"><strong>Delete Now</strong></button>
                 <button class="btn btn-outline-danger w-25 m-3" (click)="cancel()"><strong>Cancel</strong></button>
             </div>
@@ -135,29 +127,21 @@
                 <input class="form-control" formControlName="Email" name="Email" type="text">
             </div>
             <label><strong>Select Department</strong></label>
-            <div class="form-control mb-2" style="text-align: center;height: 2rem; padding-bottom: 1rem;">
-                <a class="adddelete_hover nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" (click)="departmentCS()">Computer Science</a></li>
-                    <li><a class="dropdown-item" (click)="departmentCivil()">Civil Engineering</a></li>
-                    <li><a class="dropdown-item" (click)="departmentMech()">Mechanical Engineering</a></li>
-                </ul>
-            </div>
-            <label><strong>Select Academic year</strong></label>
-            <div class="form-control mb-2" style="text-align: center;height: 2rem; padding-bottom: 1rem;">
-                <a class="adddelete_hover nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" (click)="firstyearselected()">1st year</a></li>
-                    <li><a class="dropdown-item" (click)="secondyearselected()">2nd year</a></li>
-                    <li><a class="dropdown-item" (click)="thirdyearselected()">3rd year</a></li>
-                    <li><a class="dropdown-item" (click)="fourthyearselected()">4th year</a></li>
-                </ul>
-            </div>
-            <div>
+            <select class="form-control text-center" (change)="department($event)" >
+                <option disabled selected>Department</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Civil Engineering">Civil Engineering</option>
+                <option value="Mechanical Engineering">Mechanical Engineering</option>
+            </select>
+            <label class="mt-2"><strong>Select Academic year</strong></label>
+            <select class="form-control text-center" (change)="stdyear($event)" >
+                <option disabled selected>Academic Year</option>
+                <option value="firstyearselected">First Year</option>
+                <option value="secondyearselected">Second Year</option>
+                <option value="thirdyearselected">Third Year</option>
+                <option value="fourthyearselected">Fourth Year</option>
+            </select>
+            <div class="mt-2">
                 <label for="email"><strong>Default Password</strong></label>
                 <input class="form-control text-center" type="text" placeholder="{{defaultpassword}}" disabled>
             </div>
@@ -171,7 +155,7 @@
 
 <div class="outer_div" *ngIf="Item==6">
     <div class="inner_div text-center form-control p-4">
-        <h3><strong>Add a student</strong></h3>
+        <h3><strong>Delete a student</strong></h3>
         <form (ngSubmit)="studentDelete()" [formGroup]="studentdeleteArray">
             <hr>
             <div>
@@ -179,29 +163,21 @@
                 <input class="form-control" formControlName="Email" name="Email" type="text">
             </div>
             <label><strong>Select Department</strong></label>
-            <div class="form-control mb-2" style="text-align: center;height: 2rem; padding-bottom: 1rem;">
-                <a class="adddelete_hover nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" (click)="departmentCS()">Computer Science</a></li>
-                    <li><a class="dropdown-item" (click)="departmentCivil()">Civil Engineering</a></li>
-                    <li><a class="dropdown-item" (click)="departmentMech()">Mechanical Engineering</a></li>
-                </ul>
-            </div>
-            <label><strong>Select Academic year</strong></label>
-            <div class="form-control mb-2" style="text-align: center;height: 2rem; padding-bottom: 1rem;">
-                <a class="adddelete_hover nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" (click)="firstyearselected()">1st year</a></li>
-                    <li><a class="dropdown-item" (click)="secondyearselected()">2nd year</a></li>
-                    <li><a class="dropdown-item" (click)="thirdyearselected()">3rd year</a></li>
-                    <li><a class="dropdown-item" (click)="fourthyearselected()">4th year</a></li>
-                </ul>
-            </div>
-            <div>
+            <select class="form-control" (change)="department($event)" >
+                <option disabled selected>Department</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Civil Engineering">Civil Engineering</option>
+                <option value="Mechanical Engineering">Mechanical Engineering</option>
+            </select>
+            <label class="mt-2"><strong>Select Academic year</strong></label>
+            <select class="form-control text-center" (change)="stdyear($event)" >
+                <option disabled selected>Academic Year</option>
+                <option value="firstyearselected">First Year</option>
+                <option value="secondyearselected">Second Year</option>
+                <option value="thirdyearselected">Third Year</option>
+                <option value="fourthyearselected">Fourth Year</option>
+            </select>
+            <div class="mt-2">
                 <button type="submit" class="btn btn-outline-success w-25 m-3"><strong>Delete Now</strong></button>
                 <button class="btn btn-outline-danger w-25 m-3" (click)="cancel()"><strong>Cancel</strong></button>
             </div>
